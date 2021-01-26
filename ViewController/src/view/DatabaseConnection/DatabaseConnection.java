@@ -21,10 +21,10 @@ public class DatabaseConnection {
     public static Connection getConnection() throws SQLException {
         
         /* Database credentials >> username , password , hostname , port , SID  */
-        setUNamee("ppss");
-        setUpasss("ppss");
-//        setUipp("207.180.246.67");
-        setUipp("192.168.2.2");
+        setUNamee("irgc");
+        setUpasss("irgc");
+        setUipp("207.180.246.67");
+//        setUipp("192.168.2.2");
         setUportADF("1521");
         setUSID("orcl");
         /* END  */
