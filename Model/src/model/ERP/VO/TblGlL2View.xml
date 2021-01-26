@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblGlL2View"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblGlL2.GL_L2_ID, 
+       TblGlL2.GL_L1_ID, 
+       TblGlL2.GL_L2_NAME, 
+       TblGlL2.AST, 
+       TblGlL2.COMPANY_SBU_ID"
+  FromList="TBL_GL_L2 TblGlL2"
+  Where="TblGlL2.COMPANY_SBU_ID=nvl(:getcompid,TblGlL2.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblGlL2View"/>
+  </Variable>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="GL_L1_LOV1"
+    ViewObjectName="model.LOV.GL_L1_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_GlL1Id"
+    ListVOName="GL_L1_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="GlL1Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="GlL1Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="GlL1Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblGlL2"
+    Entity="model.ERP.EO.TblGlL2"/>
+  <ViewAttribute
+    Name="GlL2Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="GlL2Id"
+    EntityUsage="TblGlL2"
+    AliasName="GL_L2_ID"/>
+  <ViewAttribute
+    Name="GlL1Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="GlL1Id"
+    EntityUsage="TblGlL2"
+    AliasName="GL_L1_ID"
+    LOVName="LOV_GlL1Id">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="GlL2Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="GlL2Name"
+    EntityUsage="TblGlL2"
+    AliasName="GL_L2_NAME"/>
+  <ViewAttribute
+    Name="Ast"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblGlL2"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblGlL2"
+    AliasName="COMPANY_SBU_ID"/>
+  <ViewLinkAccessor
+    Name="TblGlL3View"
+    ViewLink="model.ERP.VO.FkGlL2IdLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

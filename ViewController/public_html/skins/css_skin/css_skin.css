@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+.login_background {
+    /*background-color: #a5e6ec;*/
+    background-color: White;
+}
+
+.content_pannel_acc {
+    /*width:1030px !important;*/
+}
+
+.tabel_pannel_tab {
+    /*width:1015px !important;*/
+}
+
+.backColor {
+    /*background-color: White;*/
+    background-color: #f3eee7;
+}
+
+.position_fixed_button {
+    position: fixed;
+    right: 2%;
+    z-index: 10;
+}
+
+.header_module {
+    font-size: 15px;
+}
+
+.theme_color {
+    background-color: #EDE5DA;
+    /*================background-color: #D6EAF8;*/
+}
+
+.sidebar_style {
+    width: 220px;
+}
+
+.sidebar_detailitem_Style {
+    overflow: auto !important;
+}
+
+.sidebar_button {
+    width:190px;
+}
+af|button {
+    color: #a67f48;
+    border: #a67f48 1px solid;
+}
+
+af|button::link {
+    background-color: #EDE5DA !important;
+}
+af|button:hover::link {
+    background-color: #a67f48 !important;
+    color: White;
+}
+
+
+.AFDefaultFontFamily:alias {
+    font-family: serif !important;
+}
+
+af|table::navbar {
+    margin-left:38% !important; 
+}
+
+af|panelAccordion::header-title	{  
+    color: white !important; 
+    background-color: #a67f48 !important; 
+}
+
+af|panelAccordion::header-toolbar{  
+    background-color: #a67f48 !important; 
+}
+
+af|panelAccordion::undisclosed-icon-style{  
+    background-color: #a67f48 !important; 
+    padding: 4px !important ;
+}
+
+
+
+
+
+
+af|panelTabbed::tab-content{  
+    background-color: #a67f48 !important; 
+}
+af|panelTabbed::tab-content:hover{  
+    background-color: #EDE5DA !important; 
+}
+/*it will be applied on text in selected tab of panelTabbed */
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link {
+    background-color: #EDE5DA !important; 
+    color:#a67f48;
+}
+
+af|panelTabbed::tab af|panelTabbed::tab-text-link {
+    color:White;
+}
+
+af|panelTabbed::tab:selected:hover af|panelTabbed::tab-text-link:hover {
+    color:#a67f48 !important;
+}
+
+af|panelTabbed::tab:hover af|panelTabbed::tab-text-link:hover {
+    color:#a67f48 !important;
+}
+
+
+
+/*af|panelTabbed::body {
+    background-color: #a67f48 ; 
+    color: White; 
+    border: thick ;
+}*/
+
+
+
+
+
+
+
+
+af|panelFormLayout af|inputDate::label, af|inputText::label, af|selectOneChoice::label{
+    /*border:1px solid black;*/ 
+    text-align:left !important;
+    width:150px !important;
+    color: #a67f48;
+    background-color: #EDE5DA !important;
+}
+
+/*af|panelFormLayout af|selectOneChoice::label{
+    border:10px solid black; 
+    text-align:left;
+}*/
+
+/*af|table {
+background: none;
+border: 1px solid #A65B1A;
+}*/
+
+af|table af|column::column-header-cell 
+{   
+/*height:35px;*/
+color:white; 
+/*text-align: center;*/
+font-size: 12px;
+font-weight: bold;
+/*background-image: none;*/
+background-color: #a67f48;
+/*vertical-align: middle;*/
+/*border-left: 1px solid #BF691E;*/
+}
+
+/*af|table::data-table-VH-lines af|column::data-cell
+{
+background-color:#fff;
+color: #7F4614;
+font-size:12px;
+font-family:'OpenSans-Regular';
+height:30px;
+vertical-align: middle;
+text-align: left;
+} 
+
+af|table::data-table-VH-lines af|column::banded-data-cell{ 
+background-color:#F0E5CC; 
+color: #7F4614;
+font-size:12px;   
+font-family:'OpenSans-Regular';  
+height:30px;   
+vertical-align: middle;
+text-align: left; 
+}
+*/
+
+
+af|table::data-row:selected af|column::data-cell
+{  
+background-color: #EDE5DA;
+color: #a67f48;  
+}
+
+af|table::data-row:selected af|column::banded-data-cell
+{  
+background-color: #EDE5DA; 
+color: #a67f48;  
+}
+
+af|table::data-row:selected:focused af|column::data-cell
+{  
+background-color: #EDE5DA;  
+color: #a67f48; 
+}
+
+af|table::data-row:selected:focused af|column::banded-data-cell {
+background-color: #EDE5DA;   
+color: #a67f48;    
+}
+
+af|table::data-row:hover af|column::data-cell
+{ 
+background-color: #dccdb8;  
+color: #a67f48;  
+}
+
+af|table::data-row:hover af|column::banded-data-cell { 
+background-color: #dccdb8;
+color: #a67f48; 
+}
+

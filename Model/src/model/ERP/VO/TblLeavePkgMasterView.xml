@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblLeavePkgMasterView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblLeavePkgMaster.ID, 
+       TblLeavePkgMaster.PKG_NAME, 
+       TblLeavePkgMaster.REMARKS, 
+       TblLeavePkgMaster.GROUP_COMPANY_ID, 
+       TblLeavePkgMaster.AST, 
+       TblLeavePkgMaster.CREATED_DATE, 
+       TblLeavePkgMaster.CREATED_BY, 
+       TblLeavePkgMaster.UPDATED_DATE, 
+       TblLeavePkgMaster.UPDATED_BY, 
+       TblLeavePkgMaster.COMPANY_SBU_ID"
+  FromList="TBL_LEAVE_PKG_MASTER TblLeavePkgMaster"
+  Where="TblLeavePkgMaster.COMPANY_SBU_ID=nvl(:getcompid,TblLeavePkgMaster.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblLeavePkgMasterView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblLeavePkgMaster"
+    Entity="model.ERP.EO.TblLeavePkgMaster"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="PkgName"
+    PrecisionRule="true"
+    EntityAttrName="PkgName"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="PKG_NAME"/>
+  <ViewAttribute
+    Name="Remarks"
+    PrecisionRule="true"
+    EntityAttrName="Remarks"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblLeavePkgMaster"
+    AliasName="COMPANY_SBU_ID"/>
+  <ViewLinkAccessor
+    Name="TblLeavePkgDetailView"
+    ViewLink="model.ERP.VO.FkLeavePkgDetailMasterLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

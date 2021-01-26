@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblEvalWeightageView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblEvalWeightage.ID, 
+       TblEvalWeightage.GROUP_COMPANY_ID, 
+       TblEvalWeightage.GRADE_ID, 
+       TblEvalWeightage.TERM_ID, 
+       TblEvalWeightage.LOOKUP_EVALUATION, 
+       TblEvalWeightage.LOOKUP_D_TOPIC1, 
+       TblEvalWeightage.TOPIC1_MARKS, 
+       TblEvalWeightage.LOOKUP_D_TOPIC2, 
+       TblEvalWeightage.TOPIC2_MARKS, 
+       TblEvalWeightage.EVA_TYPE, 
+       TblEvalWeightage.TOTAL_MARKS, 
+       TblEvalWeightage.AST, 
+       TblEvalWeightage.CREATED_DATE, 
+       TblEvalWeightage.CREATED_BY, 
+       TblEvalWeightage.UPDATED_DATE, 
+       TblEvalWeightage.UPDATED_BY, 
+       TblEvalWeightage.COMPANY_SBU_ID"
+  FromList="TBL_EVAL_WEIGHTAGE TblEvalWeightage"
+  Where="TblEvalWeightage.COMPANY_SBU_ID=nvl(:getcompid,TblEvalWeightage.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblEvalWeightageView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Grade_Name_LOV1"
+    ViewObjectName="model.LOV.Grade_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Terms_Name_LOV1"
+    ViewObjectName="model.LOV.Terms_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Evaluation_LOV1"
+    ViewObjectName="model.LOV.Lookup_Evaluation_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="lookup_Topic_LOV1"
+    ViewObjectName="model.LOV.lookup_Topic_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Evaluation_Type_LOV1"
+    ViewObjectName="model.LOV.Evaluation_Type_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_GradeId"
+    ListVOName="Grade_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="GradeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="GradeName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TermId"
+    ListVOName="Terms_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TermId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="TermName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupEvaluation"
+    ListVOName="Lookup_Evaluation_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupEvaluation"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupDTopic1"
+    ListVOName="lookup_Topic_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupDTopic1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupDTopic2"
+    ListVOName="lookup_Topic_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupDTopic2"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_EvaType"
+    ListVOName="Evaluation_Type_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="EvaType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblEvalWeightage"
+    Entity="model.ERP.EO.TblEvalWeightage"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblEvalWeightage"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblEvalWeightage"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="GradeId"
+    PrecisionRule="true"
+    EntityAttrName="GradeId"
+    EntityUsage="TblEvalWeightage"
+    AliasName="GRADE_ID"
+    LOVName="LOV_GradeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="TermId"
+    PrecisionRule="true"
+    EntityAttrName="TermId"
+    EntityUsage="TblEvalWeightage"
+    AliasName="TERM_ID"
+    LOVName="LOV_TermId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupEvaluation"
+    PrecisionRule="true"
+    EntityAttrName="LookupEvaluation"
+    EntityUsage="TblEvalWeightage"
+    AliasName="LOOKUP_EVALUATION"
+    LOVName="LOV_LookupEvaluation">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupDTopic1"
+    PrecisionRule="true"
+    EntityAttrName="LookupDTopic1"
+    EntityUsage="TblEvalWeightage"
+    AliasName="LOOKUP_D_TOPIC1"
+    LOVName="LOV_LookupDTopic1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Topic1Marks"
+    PrecisionRule="true"
+    EntityAttrName="Topic1Marks"
+    EntityUsage="TblEvalWeightage"
+    AliasName="TOPIC1_MARKS"/>
+  <ViewAttribute
+    Name="LookupDTopic2"
+    PrecisionRule="true"
+    EntityAttrName="LookupDTopic2"
+    EntityUsage="TblEvalWeightage"
+    AliasName="LOOKUP_D_TOPIC2"
+    LOVName="LOV_LookupDTopic2">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Topic2Marks"
+    PrecisionRule="true"
+    EntityAttrName="Topic2Marks"
+    EntityUsage="TblEvalWeightage"
+    AliasName="TOPIC2_MARKS"/>
+  <ViewAttribute
+    Name="EvaType"
+    PrecisionRule="true"
+    EntityAttrName="EvaType"
+    EntityUsage="TblEvalWeightage"
+    AliasName="EVA_TYPE"
+    LOVName="LOV_EvaType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="TotalMarks"
+    PrecisionRule="true"
+    EntityAttrName="TotalMarks"
+    EntityUsage="TblEvalWeightage"
+    AliasName="TOTAL_MARKS"/>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblEvalWeightage"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblEvalWeightage"
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblEvalWeightage"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblEvalWeightage"
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblEvalWeightage"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblEvalWeightage"
+    AliasName="COMPANY_SBU_ID"/>
+</ViewObject>

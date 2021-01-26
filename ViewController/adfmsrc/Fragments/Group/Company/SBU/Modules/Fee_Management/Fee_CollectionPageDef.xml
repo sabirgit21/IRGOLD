@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="Fee_CollectionPageDef"
+                Package="Fragments.Group.Company.SBU.Modules.Fee_Management">
+  <parameters/>
+  <executables>
+    <iterator Binds="TblFeeRecView1" RangeSize="8" DataControl="AppModuleDataControl1" id="TblFeeRecView1Iterator"/>
+    <searchRegion Binds="TblFeeRecView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFeeRecView1Query"/>
+    <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="USERS_CRUD_OPERATIONS1Iterator"/>
+    <iterator Binds="TblFeeRecDView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblFeeRecDView2Iterator"/>
+    <searchRegion Binds="TblFeeRecDView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFeeRecDView2Query"/>
+    <iterator Binds="TblEditFeeCollMView1" RangeSize="8" DataControl="AppModuleDataControl1"
+              id="TblEditFeeCollMView1Iterator"/>
+    <searchRegion Binds="TblEditFeeCollMView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblEditFeeCollMView1Query"/>
+    <iterator Binds="TblEditFeeCollDView2" RangeSize="8" DataControl="AppModuleDataControl1"
+              id="TblEditFeeCollDView2Iterator"/>
+    <searchRegion Binds="TblEditFeeCollDView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblEditFeeCollDView2Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblFeeRecView1Iterator" id="TblFeeRecView1">
+      <nodeDefinition DefName="model.ERP.VO.TblFeeRecView" Name="TblFeeRecView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Dated"/>
+          <Item Value="FeeGenDetailId"/>
+          <Item Value="Remarks"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblFeeRecView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TblFeeRecView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblFeeRecView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl1"/>
+    <tree IterBinding="USERS_CRUD_OPERATIONS1Iterator" id="USERS_CRUD_OPERATIONS1">
+      <nodeDefinition DefName="model.UserRoles.VO.USERS_CRUD_OPERATIONS" Name="USERS_CRUD_OPERATIONS10">
+        <AttrNames>
+          <Item Value="Crudid"/>
+          <Item Value="Operation"/>
+          <Item Value="Icon"/>
+          <Item Value="Bindingname"/>
+          <Item Value="Btndisabled"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblFeeRecDView2Iterator" id="TblFeeRecDView2">
+      <nodeDefinition DefName="model.ERP.VO.TblFeeRecDView" Name="TblFeeRecDView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="RecType"/>
+          <Item Value="Amount"/>
+          <Item Value="ChqNo"/>
+          <Item Value="ChqDate"/>
+          <Item Value="Bank"/>
+          <Item Value="Remarks"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblFeeRecDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFeeRecDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblFeeRecDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TblEditFeeCollMView1Iterator" id="TblEditFeeCollMView1">
+      <nodeDefinition DefName="model.ERP.VO.TblEditFeeCollMView" Name="TblEditFeeCollMView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Dated"/>
+          <Item Value="AcadYearId"/>
+          <Item Value="TermsId"/>
+          <Item Value="GradeId"/>
+          <Item Value="SectionsId"/>
+          <Item Value="StdRegId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblEditFeeCollMView1Iterator" id="CreateInsert2" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblEditFeeCollMView1Iterator" id="Execute2" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblEditFeeCollMView1Iterator" id="Delete2" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <tree IterBinding="TblEditFeeCollDView2Iterator" id="TblEditFeeCollDView2">
+      <nodeDefinition DefName="model.ERP.VO.TblEditFeeCollDView" Name="TblEditFeeCollDView20">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="FeeTypeId"/>
+          <Item Value="Amount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblEditFeeCollDView2Iterator" id="CreateInsert3" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblEditFeeCollDView2Iterator" id="Execute3" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblEditFeeCollDView2Iterator" id="Delete3" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

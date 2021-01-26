@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblLeaveReqView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblLeaveReq.ID, 
+       TblLeaveReq.DATED, 
+       TblLeaveReq.LEAVE_TYPE_ID, 
+       TblLeaveReq.FROM_DATE, 
+       TblLeaveReq.TO_DATE, 
+       TblLeaveReq.LEAVE_DAYS, 
+       TblLeaveReq.REMARKS, 
+       TblLeaveReq.GROUP_COMPANY_ID, 
+       TblLeaveReq.AST, 
+       TblLeaveReq.CREATED_DATE, 
+       TblLeaveReq.CREATED_BY, 
+       TblLeaveReq.UPDATED_DATE, 
+       TblLeaveReq.UPDATED_BY, 
+       TblLeaveReq.COMPANY_SBU_ID"
+  FromList="TBL_LEAVE_REQ TblLeaveReq"
+  Where="TblLeaveReq.COMPANY_SBU_ID=nvl(:getcompid,TblLeaveReq.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblLeaveReqView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Leave_Type_LOV1"
+    ViewObjectName="model.LOV.Leave_Type_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LeaveTypeId"
+    ListVOName="Leave_Type_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LeaveTypeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="LeaveName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblLeaveReq"
+    Entity="model.ERP.EO.TblLeaveReq"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblLeaveReq"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Dated"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblLeaveReq"
+    AliasName="DATED"/>
+  <ViewAttribute
+    Name="LeaveTypeId"
+    PrecisionRule="true"
+    EntityAttrName="LeaveTypeId"
+    EntityUsage="TblLeaveReq"
+    AliasName="LEAVE_TYPE_ID"
+    LOVName="LOV_LeaveTypeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FromDate"
+    PrecisionRule="true"
+    EntityAttrName="FromDate"
+    EntityUsage="TblLeaveReq"
+    AliasName="FROM_DATE"/>
+  <ViewAttribute
+    Name="ToDate"
+    PrecisionRule="true"
+    EntityAttrName="ToDate"
+    EntityUsage="TblLeaveReq"
+    AliasName="TO_DATE"/>
+  <ViewAttribute
+    Name="LeaveDays"
+    PrecisionRule="true"
+    EntityAttrName="LeaveDays"
+    EntityUsage="TblLeaveReq"
+    AliasName="LEAVE_DAYS"/>
+  <ViewAttribute
+    Name="Remarks"
+    PrecisionRule="true"
+    EntityAttrName="Remarks"
+    EntityUsage="TblLeaveReq"
+    AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblLeaveReq"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblLeaveReq"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblLeaveReq"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblLeaveReq"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblLeaveReq"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblLeaveReq"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblLeaveReq"
+    AliasName="COMPANY_SBU_ID"/>
+</ViewObject>

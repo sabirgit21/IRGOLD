@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblCustOpenBlncView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblCustOpenBlnc.CUST_OPEN_BLNC_ID, 
+       TblCustOpenBlnc.CUST_OPEN_BLNC_DATED, 
+       TblCustOpenBlnc.RBL_CUST_ID, 
+       TblCustOpenBlnc.CUST_OPEN_BLNC_DR, 
+       TblCustOpenBlnc.CUST_OPEN_BLNC_CR, 
+       TblCustOpenBlnc.GROUP_COMPANY_ID, 
+       TblCustOpenBlnc.COMPANY_SBU_ID"
+  FromList="TBL_CUST_OPEN_BLNC TblCustOpenBlnc"
+  Where="TblCustOpenBlnc.COMPANY_SBU_ID=nvl(:getcompid,TblCustOpenBlnc.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblCustOpenBlncView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Customer_Name_LOV1"
+    ViewObjectName="model.LOV.Customer_Name_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_PblCustId"
+    ListVOName="Customer_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RblCustId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblCustOpenBlnc"
+    Entity="model.ERP.EO.TblCustOpenBlnc"/>
+  <ViewAttribute
+    Name="CustOpenBlncId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CustOpenBlncId"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="CUST_OPEN_BLNC_ID"/>
+  <ViewAttribute
+    Name="CustOpenBlncDated"
+    PrecisionRule="true"
+    EntityAttrName="CustOpenBlncDated"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="CUST_OPEN_BLNC_DATED"/>
+  <ViewAttribute
+    Name="RblCustId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RblCustId"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="RBL_CUST_ID"
+    LOVName="LOV_PblCustId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CustOpenBlncDr"
+    PrecisionRule="true"
+    EntityAttrName="CustOpenBlncDr"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="CUST_OPEN_BLNC_DR"/>
+  <ViewAttribute
+    Name="CustOpenBlncCr"
+    PrecisionRule="true"
+    EntityAttrName="CustOpenBlncCr"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="CUST_OPEN_BLNC_CR"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblCustOpenBlnc"
+    AliasName="COMPANY_SBU_ID"/>
+</ViewObject>

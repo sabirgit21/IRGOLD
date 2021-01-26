@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblTransFeeGenDetailView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblTransFeeGenDetail.ID, 
+       TblTransFeeGenDetail.TRANS_FEE_GEN_MASTER_ID, 
+       TblTransFeeGenDetail.ROUTE_FEE_MASTER_ID, 
+       TblTransFeeGenDetail.STD_REG_ID, 
+       TblTransFeeGenDetail.AMOUNT, 
+       TblTransFeeGenDetail.AST, 
+       TblTransFeeGenDetail.CREATED_DATE, 
+       TblTransFeeGenDetail.CREATED_BY, 
+       TblTransFeeGenDetail.UPDATED_DATE, 
+       TblTransFeeGenDetail.UPDATED_BY"
+  FromList="TBL_TRANS_FEE_GEN_DETAIL TblTransFeeGenDetail">
+  <ViewAccessor
+    Name="Student_Reg_LOV1"
+    ViewObjectName="model.LOV.Student_Reg_LOV"
+    RowLevelBinds="true"/>
+  <!--<ViewAccessor
+    Name="Route_Fee_LOV1"
+    ViewObjectName="model.LOV.Route_Name_Bus_Stop_LOV"
+    RowLevelBinds="true"/>-->
+  <ViewAccessor
+    Name="Route_Stop_Name_LOV1"
+    ViewObjectName="model.LOV.Route_Stop_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_StdRegId"
+    ListVOName="Student_Reg_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="StdRegId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_RouteFeeMasterId"
+    ListVOName="Route_Stop_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RouteFeeMasterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="RouteName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblTransFeeGenDetail"
+    Entity="model.ERP.EO.TblTransFeeGenDetail"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="TransFeeGenMasterId"
+    PrecisionRule="true"
+    EntityAttrName="TransFeeGenMasterId"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="TRANS_FEE_GEN_MASTER_ID"/>
+  <ViewAttribute
+    Name="RouteFeeMasterId"
+    PrecisionRule="true"
+    EntityAttrName="RouteFeeMasterId"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="ROUTE_FEE_MASTER_ID"
+    LOVName="LOV_RouteFeeMasterId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="StdRegId"
+    PrecisionRule="true"
+    EntityAttrName="StdRegId"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="STD_REG_ID"
+    LOVName="LOV_StdRegId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Amount"
+    PrecisionRule="true"
+    EntityAttrName="Amount"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="AMOUNT"/>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblTransFeeGenDetail"
+    AliasName="UPDATED_BY"/>
+</ViewObject>

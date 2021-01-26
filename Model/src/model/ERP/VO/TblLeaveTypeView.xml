@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblLeaveTypeView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblLeaveType.ID, 
+       TblLeaveType.LEAVE_CODE, 
+       TblLeaveType.LEAVE_NAME, 
+       TblLeaveType.PAY_TYPE, 
+       TblLeaveType.GROUP_COMPANY_ID, 
+       TblLeaveType.AST, 
+       TblLeaveType.CREATED_DATE, 
+       TblLeaveType.CREATED_BY, 
+       TblLeaveType.UPDATED_DATE, 
+       TblLeaveType.UPDATED_BY, 
+       TblLeaveType.COMPANY_SBU_ID"
+  FromList="TBL_LEAVE_TYPE TblLeaveType"
+  Where="TblLeaveType.COMPANY_SBU_ID=nvl(:getcompid,TblLeaveType.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblLeaveTypeView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Recieve_Type_LOV1"
+    ViewObjectName="model.LOV.Recieve_Type_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Recieve_Type_LOV2"
+    ViewObjectName="model.LOV.Recieve_Type_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PayType"
+    ListVOName="Recieve_Type_LOV2"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PayType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblLeaveType"
+    Entity="model.ERP.EO.TblLeaveType"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblLeaveType"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="LeaveCode"
+    PrecisionRule="true"
+    EntityAttrName="LeaveCode"
+    EntityUsage="TblLeaveType"
+    AliasName="LEAVE_CODE"/>
+  <ViewAttribute
+    Name="LeaveName"
+    PrecisionRule="true"
+    EntityAttrName="LeaveName"
+    EntityUsage="TblLeaveType"
+    AliasName="LEAVE_NAME"/>
+  <ViewAttribute
+    Name="PayType"
+    PrecisionRule="true"
+    EntityAttrName="PayType"
+    EntityUsage="TblLeaveType"
+    AliasName="PAY_TYPE"
+    LOVName="LOV_PayType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblLeaveType"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblLeaveType"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblLeaveType"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblLeaveType"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblLeaveType"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblLeaveType"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblLeaveType"
+    AliasName="COMPANY_SBU_ID"/>
+  <ViewLinkAccessor
+    Name="TblLeaveReqView"
+    ViewLink="model.ERP.VO.FkLeaveReqLeaveTypeLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblLeavePkgDetailView"
+    ViewLink="model.ERP.VO.FkLeavePkgDetailLeaveTypeLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

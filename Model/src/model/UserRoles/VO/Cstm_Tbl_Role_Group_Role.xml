@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Cstm_Tbl_Role_Group_Role"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  SelectList="TblRole.AST, 
+       TblRole.ID, 
+       TblRole.NAME, 
+       TblRoleGroup.ROLE_ID, 
+       TblRoleGroup.ID AS ID1, 
+       TblRoleGroup.GROUP_ID, 
+       TblRoleGroup.R_VIEW, 
+       TblRole.TEMP_COMPANY, 
+       TblRole.TEMP_GROUP, 
+       TblRole.TEMP_SBU, 
+       TblRole.ROLE_TYPE"
+  FromList="TBL_ROLE TblRole, TBL_ROLE_GROUP TblRoleGroup"
+  Where="TblRole.ID = TblRoleGroup.ROLE_ID(+)          
+AND TblRole.AST = 'Y'      
+--AND TblRoleGroup.R_VIEW = 'Y'          
+--AND TblRoleGroup.GROUP_ID = 1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="model.UserRoles.VO.Cstm_Tbl_Role_Group_Role_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Role_Type_LOV1"
+    ViewObjectName="model.UserRoles.LOV.Role_Type_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_RoleType"
+    ListVOName="Role_Type_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RoleType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DbAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblRole"
+    Entity="model.UserRoles.EO.TblRole"/>
+  <EntityUsage
+    Name="TblRoleGroup"
+    Entity="model.UserRoles.EO.TblRoleGroup"
+    Association="model.UserRoles.EO.FkRoleGroupRoleAssoc"
+    AssociationEnd="model.UserRoles.EO.FkRoleGroupRoleAssoc.TblRoleGroup"
+    SourceUsage="model.UserRoles.VO.Cstm_Tbl_Role_Group_Role.TblRole"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.UserRoles.EO.TblRoleGroup.RoleId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.UserRoles.EO.TblRole.Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblRole"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblRole"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblRole"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="RoleGroupRoleId"
+    PrecisionRule="true"
+    EntityAttrName="RoleId"
+    EntityUsage="TblRoleGroup"
+    AliasName="ROLE_ID"/>
+  <ViewAttribute
+    Name="RoleGroupId"
+    IsUpdateable="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblRoleGroup"
+    AliasName="ID1"/>
+  <ViewAttribute
+    Name="GroupId"
+    PrecisionRule="true"
+    EntityAttrName="GroupId"
+    EntityUsage="TblRoleGroup"
+    AliasName="GROUP_ID"/>
+  <ViewAttribute
+    Name="RView"
+    PrecisionRule="true"
+    EntityAttrName="RView"
+    EntityUsage="TblRoleGroup"
+    AliasName="R_VIEW"/>
+  <ViewAttribute
+    Name="TempCompany"
+    PrecisionRule="true"
+    EntityAttrName="TempCompany"
+    EntityUsage="TblRole"
+    AliasName="TEMP_COMPANY"/>
+  <ViewAttribute
+    Name="TempGroup"
+    PrecisionRule="true"
+    EntityAttrName="TempGroup"
+    EntityUsage="TblRole"
+    AliasName="TEMP_GROUP"/>
+  <ViewAttribute
+    Name="TempSbu"
+    PrecisionRule="true"
+    EntityAttrName="TempSbu"
+    EntityUsage="TblRole"
+    AliasName="TEMP_SBU"/>
+  <ViewAttribute
+    Name="RoleType"
+    PrecisionRule="true"
+    EntityAttrName="RoleType"
+    EntityUsage="TblRole"
+    AliasName="ROLE_TYPE"
+    LOVName="LOV_RoleType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="TblRoleGroupView"
+    ViewLink="model.UserRoles.VO.FK_Cstm_Role_Group_Role_FkLink_Role_Group"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblUserView"
+    ViewLink="model.UserRoles.VO.FK_Cstm_Role_Group_User_FkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

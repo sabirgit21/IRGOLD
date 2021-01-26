@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblBpvMView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblBpvM.ID, 
+       TblBpvM.VNO, 
+       TblBpvM.VTP, 
+       TblBpvM.DATED, 
+       TblBpvM.CHQ_NO, 
+       TblBpvM.CHQ_DATE, 
+       TblBpvM.CLR_DATE, 
+       TblBpvM.NARRATION, 
+       TblBpvM.GROUP_COMPANY_ID, 
+       TblBpvM.COMPANY_SBU_ID, 
+       TblBpvM.CREATED_DATE, 
+       TblBpvM.CREATED_BY, 
+       TblBpvM.UPDATED_DATE, 
+       TblBpvM.UPDATED_BY"
+  FromList="TBL_BPV_M TblBpvM"
+  Where="TblBpvM.COMPANY_SBU_ID = nvl(:getCompId,TblBpvM.COMPANY_SBU_ID)">
+  <Variable
+    Name="getCompId"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      CodeSourceName="TblBpvMView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Company_SBU_Name_LOV1"
+    ViewObjectName="model.LOV.Company_SBU_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Gl_Trans_Vtp_LOV1"
+    ViewObjectName="model.LOV.Gl_Trans_Vtp_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_CompanySbuId"
+    ListVOName="Company_SBU_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CompanySbuId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Vtp"
+    ListVOName="Gl_Trans_Vtp_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Vtp"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblBpvM"
+    Entity="model.ERP.EO.TblBpvM"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblBpvM"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Vno"
+    PrecisionRule="true"
+    EntityAttrName="Vno"
+    EntityUsage="TblBpvM"
+    AliasName="VNO"/>
+  <ViewAttribute
+    Name="Vtp"
+    PrecisionRule="true"
+    EntityAttrName="Vtp"
+    EntityUsage="TblBpvM"
+    AliasName="VTP"
+    LOVName="LOV_Vtp">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Dated"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblBpvM"
+    AliasName="DATED"/>
+  <ViewAttribute
+    Name="ChqNo"
+    PrecisionRule="true"
+    EntityAttrName="ChqNo"
+    EntityUsage="TblBpvM"
+    AliasName="CHQ_NO"/>
+  <ViewAttribute
+    Name="ChqDate"
+    PrecisionRule="true"
+    EntityAttrName="ChqDate"
+    EntityUsage="TblBpvM"
+    AliasName="CHQ_DATE"/>
+  <ViewAttribute
+    Name="ClrDate"
+    PrecisionRule="true"
+    EntityAttrName="ClrDate"
+    EntityUsage="TblBpvM"
+    AliasName="CLR_DATE"/>
+  <ViewAttribute
+    Name="Narration"
+    PrecisionRule="true"
+    EntityAttrName="Narration"
+    EntityUsage="TblBpvM"
+    AliasName="NARRATION"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblBpvM"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblBpvM"
+    AliasName="COMPANY_SBU_ID"
+    LOVName="LOV_CompanySbuId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblBpvM"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblBpvM"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblBpvM"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblBpvM"
+    AliasName="UPDATED_BY"/>
+  <ViewLinkAccessor
+    Name="TblBpvDView"
+    ViewLink="model.ERP.VO.FkBpvDMasterLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

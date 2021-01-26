@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblQuoMasterView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblQuoMaster.ID, 
+       TblQuoMaster.VNO, 
+       TblQuoMaster.VTP, 
+       TblQuoMaster.DATED, 
+       TblQuoMaster.PBL_CUST_ID, 
+       TblQuoMaster.CONTACT_PERSON, 
+       TblQuoMaster.NET_AMT, 
+       TblQuoMaster.NARRATION, 
+       TblQuoMaster.GROUP_COMPANY_ID, 
+       TblQuoMaster.CREATED_DATE, 
+       TblQuoMaster.CREATED_BY, 
+       TblQuoMaster.UPDATED_DATE, 
+       TblQuoMaster.UPDATED_BY, 
+       TblQuoMaster.COMPANY_SBU_ID"
+  FromList="TBL_QUO_MASTER TblQuoMaster"
+  Where="TblQuoMaster.COMPANY_SBU_ID=nvl(:getcompid, TblQuoMaster.COMPANY_SBU_ID)">
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      CodeSourceName="TblQuoMasterView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Customer_Name_LOV1"
+    ViewObjectName="model.LOV.Customer_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Gl_Trans_Vtp_LOV1"
+    ViewObjectName="model.LOV.Gl_Trans_Vtp_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_PblCustId"
+    ListVOName="Customer_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PblCustId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="ContactPerson"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+      <Item Value="ContactPer"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Vtp"
+    ListVOName="Gl_Trans_Vtp_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Vtp"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblQuoMaster"
+    Entity="model.ERP.EO.TblQuoMaster"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblQuoMaster"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Vno"
+    PrecisionRule="true"
+    EntityAttrName="Vno"
+    EntityUsage="TblQuoMaster"
+    AliasName="VNO"/>
+  <ViewAttribute
+    Name="Vtp"
+    PrecisionRule="true"
+    EntityAttrName="Vtp"
+    EntityUsage="TblQuoMaster"
+    AliasName="VTP"
+    LOVName="LOV_Vtp">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Dated"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblQuoMaster"
+    AliasName="DATED"/>
+  <ViewAttribute
+    Name="PblCustId"
+    PrecisionRule="true"
+    EntityAttrName="PblCustId"
+    EntityUsage="TblQuoMaster"
+    AliasName="PBL_CUST_ID"
+    LOVName="LOV_PblCustId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ContactPerson"
+    PrecisionRule="true"
+    EntityAttrName="ContactPerson"
+    EntityUsage="TblQuoMaster"
+    AliasName="CONTACT_PERSON"/>
+  <ViewAttribute
+    Name="NetAmt"
+    PrecisionRule="true"
+    EntityAttrName="NetAmt"
+    EntityUsage="TblQuoMaster"
+    AliasName="NET_AMT"/>
+  <ViewAttribute
+    Name="Narration"
+    PrecisionRule="true"
+    EntityAttrName="Narration"
+    EntityUsage="TblQuoMaster"
+    AliasName="NARRATION"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblQuoMaster"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblQuoMaster"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblQuoMaster"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblQuoMaster"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblQuoMaster"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblQuoMaster"
+    AliasName="COMPANY_SBU_ID"/>
+  <ViewLinkAccessor
+    Name="TblQuoDetailView"
+    ViewLink="model.ERP.VO.FkQuoDetailMasterLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

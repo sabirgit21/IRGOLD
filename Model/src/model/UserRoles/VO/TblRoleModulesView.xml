@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblRoleModulesView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblRoleModules.ID, 
+       TblRoleModules.ROLE_ID, 
+       TblRoleModules.R_VIEW, 
+       TblRoleModules.CREATED_DATE, 
+       TblRoleModules.CREATED_BY, 
+       TblRoleModules.UPDATED_DATE, 
+       TblRoleModules.UPDATED_BY, 
+       TblRoleModules.COMPANY_MODULE_ID, 
+       TblRoleModules.ROLE_COMPANY_ID"
+  FromList="TBL_ROLE_MODULES TblRoleModules">
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Company_Modules_LOV1"
+    ViewObjectName="model.UserRoles.LOV.Company_Modules_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_RView"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RView"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CompanyModuleId"
+    ListVOName="Company_Modules_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CompanyModuleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblRoleModules"
+    Entity="model.UserRoles.EO.TblRoleModules"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblRoleModules"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="RoleId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RoleId"
+    EntityUsage="TblRoleModules"
+    AliasName="ROLE_ID"/>
+  <ViewAttribute
+    Name="RView"
+    PrecisionRule="true"
+    EntityAttrName="RView"
+    EntityUsage="TblRoleModules"
+    AliasName="R_VIEW"
+    LOVName="LOV_RView">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblRoleModules"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblRoleModules"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblRoleModules"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblRoleModules"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="CompanyModuleId"
+    PrecisionRule="true"
+    EntityAttrName="CompanyModuleId"
+    EntityUsage="TblRoleModules"
+    AliasName="COMPANY_MODULE_ID"
+    LOVName="LOV_CompanyModuleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RoleCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="RoleCompanyId"
+    EntityUsage="TblRoleModules"
+    AliasName="ROLE_COMPANY_ID"/>
+  <ViewLinkAccessor
+    Name="TblRoleSubModulesView"
+    ViewLink="model.UserRoles.VO.FkTblRoleSubModuleFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

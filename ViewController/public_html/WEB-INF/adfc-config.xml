@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__2">
+    <managed-bean-name>LoginsBean</managed-bean-name>
+    <managed-bean-class>view.Login.Login</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__1">
+    <managed-bean-name>UserManagementSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.UserManagement</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>SetupSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.Setup</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>StaffSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.StaffSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>PayrollSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.PayrollSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>FeeManagementSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.FeeManagementSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__8">
+    <managed-bean-name>USERS_CRUD_BEAN</managed-bean-name>
+    <managed-bean-class>view.USERS_CRUD</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>TransportationSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.TransportationSidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>StudentManagementSidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.StudentManagement</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>LibrarySidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.LibrarySidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>GLvoucherTypeBean</managed-bean-name>
+    <managed-bean-class>view.VoucherType.GLvoucherType</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__12">
+    <managed-bean-name>SchlMngmtModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.SchlMngmtModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>PayrollModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.PayrollModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__14">
+    <managed-bean-name>GLModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.GLModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__15">
+    <managed-bean-name>InventoryModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.InventoryModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name>ProductionModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.ProductionModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__17">
+    <managed-bean-name>SalesModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.SalesModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__18">
+    <managed-bean-name>GLvoucherTypeBean</managed-bean-name>
+    <managed-bean-class></managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__20">
+    <managed-bean-name>InventoryVtpBean</managed-bean-name>
+    <managed-bean-class>view.VoucherType.InventoryVtp</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__19">
+    <managed-bean-name>UserManagementModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.UserManagementModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__21">
+    <managed-bean-name>FileManagingBean</managed-bean-name>
+    <managed-bean-class>view.Image.FileManaging</managed-bean-class>
+    <managed-bean-scope>pageFlow</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__22">
+    <managed-bean-name>VoucherPrintBean</managed-bean-name>
+    <managed-bean-class>view.Report.VoucherPrint</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

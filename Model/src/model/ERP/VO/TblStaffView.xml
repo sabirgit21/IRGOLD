@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblStaffView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblStaff.ID, 
+       TblStaff.GROUP_COMPANY_ID, 
+       TblStaff.DATED, 
+       TblStaff.JOB_STATUS, 
+       TblStaff.LOOKUP_SALUTATION, 
+       TblStaff.FIRST_NAME, 
+       TblStaff.LAST_NAME, 
+       TblStaff.GENDER, 
+       TblStaff.DOB, 
+       TblStaff.DOJ, 
+       TblStaff.LOOKUP_NATIONALITY, 
+       TblStaff.LOOKUP_RELIGION, 
+       TblStaff.LOOKUP_STAFF_TYPE, 
+       TblStaff.CURR_ADDRESS, 
+       TblStaff.PER_ADDRESS, 
+       TblStaff.PERSONAL_MOBILE, 
+       TblStaff.RES_PHONE, 
+       TblStaff.PERSONAL_EMAIL, 
+       TblStaff.OTHER_CONTACT, 
+       TblStaff.IMAGE, 
+       TblStaff.EMIR_ID, 
+       TblStaff.LOOKUP_REF_BY, 
+       TblStaff.AST, 
+       TblStaff.CREATED_DATE, 
+       TblStaff.CREATED_BY, 
+       TblStaff.UPDATED_DATE, 
+       TblStaff.UPDATED_BY, 
+       TblStaff.LICENSE_EXP, 
+       TblStaff.LICENSE_NO, 
+       TblStaff.LOOKUP_DETAIL_CNTRY, 
+       TblStaff.LOOKUP_DETAIL_CITY, 
+       TblStaff.LOOKUP_DETAIL_AREA, 
+       TblStaff.COMPANY_SBU_ID"
+  FromList="TBL_STAFF TblStaff"
+  Where="TblStaff.ID = nvl(:getSessStaffID,TblStaff.ID) 
+AND TblStaff.COMPANY_SBU_ID= nvl(:getcompid,TblStaff.COMPANY_SBU_ID)">
+  <Variable
+    Name="getSessStaffID"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      CodeSourceName="TblStaffView"/>
+  </Variable>
+  <Variable
+    Name="getcompid"
+    Kind="where"
+    Type="java.math.BigDecimal">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="TblStaffView"/>
+  </Variable>
+  <ViewAccessor
+    Name="Active_Name_LOV1"
+    ViewObjectName="model.LOV.Active_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Salutation_LOV1"
+    ViewObjectName="model.LOV.Lookup_Salutation_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Nationality_LOV1"
+    ViewObjectName="model.LOV.Lookup_Nationality_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Religion_LOV1"
+    ViewObjectName="model.LOV.Lookup_Religion_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Staff_Type_LOV1"
+    ViewObjectName="model.LOV.Lookup_Staff_Type_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Ref_By_LOV1"
+    ViewObjectName="model.LOV.Lookup_Ref_By_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Job_Status_LOV1"
+    ViewObjectName="model.LOV.Job_Status_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Gender_Name_LOV1"
+    ViewObjectName="model.LOV.Gender_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Country_Name_LOV1"
+    ViewObjectName="model.LOV.Lookup_Country_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_City_Name_LOV1"
+    ViewObjectName="model.LOV.Lookup_City_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Lookup_Area_Name_LOV1"
+    ViewObjectName="model.LOV.Lookup_Area_Name_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="Active_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupSalutation"
+    ListVOName="Lookup_Salutation_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupSalutation"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupNationality"
+    ListVOName="Lookup_Nationality_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupNationality"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupReligion"
+    ListVOName="Lookup_Religion_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupReligion"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupStaffType"
+    ListVOName="Lookup_Staff_Type_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupStaffType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupRefBy"
+    ListVOName="Lookup_Ref_By_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupRefBy"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_JobStatus"
+    ListVOName="Job_Status_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="JobStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Gender"
+    ListVOName="Gender_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Gender"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DBAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ViewAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupDetailCntry"
+    ListVOName="Lookup_Country_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupDetailCntry"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupDetailCity"
+    ListVOName="Lookup_City_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupDetailCity"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_LookupDetailArea"
+    ListVOName="Lookup_Area_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LookupDetailArea"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblStaff"
+    Entity="model.ERP.EO.TblStaff"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblStaff"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="GroupCompanyId"
+    PrecisionRule="true"
+    EntityAttrName="GroupCompanyId"
+    EntityUsage="TblStaff"
+    AliasName="GROUP_COMPANY_ID"/>
+  <ViewAttribute
+    Name="Dated"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="TblStaff"
+    AliasName="DATED"/>
+  <ViewAttribute
+    Name="JobStatus"
+    PrecisionRule="true"
+    EntityAttrName="JobStatus"
+    EntityUsage="TblStaff"
+    AliasName="JOB_STATUS"
+    LOVName="LOV_JobStatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupSalutation"
+    PrecisionRule="true"
+    EntityAttrName="LookupSalutation"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_SALUTATION"
+    LOVName="LOV_LookupSalutation">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FirstName"
+    PrecisionRule="true"
+    EntityAttrName="FirstName"
+    EntityUsage="TblStaff"
+    AliasName="FIRST_NAME"/>
+  <ViewAttribute
+    Name="LastName"
+    PrecisionRule="true"
+    EntityAttrName="LastName"
+    EntityUsage="TblStaff"
+    AliasName="LAST_NAME"/>
+  <ViewAttribute
+    Name="Gender"
+    PrecisionRule="true"
+    EntityAttrName="Gender"
+    EntityUsage="TblStaff"
+    AliasName="GENDER"
+    LOVName="LOV_Gender">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Dob"
+    PrecisionRule="true"
+    EntityAttrName="Dob"
+    EntityUsage="TblStaff"
+    AliasName="DOB"/>
+  <ViewAttribute
+    Name="Doj"
+    PrecisionRule="true"
+    EntityAttrName="Doj"
+    EntityUsage="TblStaff"
+    AliasName="DOJ"/>
+  <ViewAttribute
+    Name="LookupNationality"
+    PrecisionRule="true"
+    EntityAttrName="LookupNationality"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_NATIONALITY"
+    LOVName="LOV_LookupNationality">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupReligion"
+    PrecisionRule="true"
+    EntityAttrName="LookupReligion"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_RELIGION"
+    LOVName="LOV_LookupReligion">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupStaffType"
+    PrecisionRule="true"
+    EntityAttrName="LookupStaffType"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_STAFF_TYPE"
+    LOVName="LOV_LookupStaffType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CurrAddress"
+    PrecisionRule="true"
+    EntityAttrName="CurrAddress"
+    EntityUsage="TblStaff"
+    AliasName="CURR_ADDRESS"/>
+  <ViewAttribute
+    Name="PerAddress"
+    PrecisionRule="true"
+    EntityAttrName="PerAddress"
+    EntityUsage="TblStaff"
+    AliasName="PER_ADDRESS"/>
+  <ViewAttribute
+    Name="PersonalMobile"
+    PrecisionRule="true"
+    EntityAttrName="PersonalMobile"
+    EntityUsage="TblStaff"
+    AliasName="PERSONAL_MOBILE"/>
+  <ViewAttribute
+    Name="ResPhone"
+    PrecisionRule="true"
+    EntityAttrName="ResPhone"
+    EntityUsage="TblStaff"
+    AliasName="RES_PHONE"/>
+  <ViewAttribute
+    Name="PersonalEmail"
+    PrecisionRule="true"
+    EntityAttrName="PersonalEmail"
+    EntityUsage="TblStaff"
+    AliasName="PERSONAL_EMAIL"/>
+  <ViewAttribute
+    Name="OtherContact"
+    PrecisionRule="true"
+    EntityAttrName="OtherContact"
+    EntityUsage="TblStaff"
+    AliasName="OTHER_CONTACT"/>
+  <ViewAttribute
+    Name="Image"
+    PrecisionRule="true"
+    EntityAttrName="Image"
+    EntityUsage="TblStaff"
+    AliasName="IMAGE"/>
+  <ViewAttribute
+    Name="EmirId"
+    PrecisionRule="true"
+    EntityAttrName="EmirId"
+    EntityUsage="TblStaff"
+    AliasName="EMIR_ID"/>
+  <ViewAttribute
+    Name="LookupRefBy"
+    PrecisionRule="true"
+    EntityAttrName="LookupRefBy"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_REF_BY"
+    LOVName="LOV_LookupRefBy">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Ast"
+    PrecisionRule="true"
+    EntityAttrName="Ast"
+    EntityUsage="TblStaff"
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblStaff"
+    AliasName="CREATED_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblStaff"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblStaff"
+    AliasName="UPDATED_DATE"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblStaff"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="LicenseExp"
+    PrecisionRule="true"
+    EntityAttrName="LicenseExp"
+    EntityUsage="TblStaff"
+    AliasName="LICENSE_EXP"/>
+  <ViewAttribute
+    Name="LicenseNo"
+    PrecisionRule="true"
+    EntityAttrName="LicenseNo"
+    EntityUsage="TblStaff"
+    AliasName="LICENSE_NO"/>
+  <ViewAttribute
+    Name="LookupDetailCntry"
+    PrecisionRule="true"
+    EntityAttrName="LookupDetailCntry"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_DETAIL_CNTRY"
+    LOVName="LOV_LookupDetailCntry">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupDetailCity"
+    PrecisionRule="true"
+    EntityAttrName="LookupDetailCity"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_DETAIL_CITY"
+    LOVName="LOV_LookupDetailCity">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LookupDetailArea"
+    PrecisionRule="true"
+    EntityAttrName="LookupDetailArea"
+    EntityUsage="TblStaff"
+    AliasName="LOOKUP_DETAIL_AREA"
+    LOVName="LOV_LookupDetailArea">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CompanySbuId"
+    PrecisionRule="true"
+    EntityAttrName="CompanySbuId"
+    EntityUsage="TblStaff"
+    AliasName="COMPANY_SBU_ID"/>
+  <ViewLinkAccessor
+    Name="TblStaffBenefitView"
+    ViewLink="model.ERP.VO.FkStaffBenefitStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffDepartmentView"
+    ViewLink="model.ERP.VO.FkStaffDepartmentStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffDesignationView"
+    ViewLink="model.ERP.VO.FkStaffDesignationStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffExprView"
+    ViewLink="model.ERP.VO.FkStaffExprStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffKinView"
+    ViewLink="model.ERP.VO.FkStaffKinStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffPassportView"
+    ViewLink="model.ERP.VO.FkStaffPassportStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffRoleView"
+    ViewLink="model.ERP.VO.FkStaffRoleStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffSalaryView"
+    ViewLink="model.ERP.VO.FkStaffSalaryStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffVisaView"
+    ViewLink="model.ERP.VO.FkStaffVisaStaffLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffSubjectView"
+    ViewLink="model.ERP.VO.FKTblStaffSubjectFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffDocsView"
+    ViewLink="model.ERP.VO.FkTblStaffDocsFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblStaffLeavePkgView"
+    ViewLink="model.ERP.VO.FkTblStaffLeavePkgFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblSectionStaffView"
+    ViewLink="model.ERP.VO.FkTblSectionStaffFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblProIssDetailView"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectList="TblProIssDetail.ID, 
+       TblProIssDetail.PRO_ISS_MASTER_ID, 
+       TblProIssDetail.SR_NO, 
+       TblProIssDetail.ITEM_L4_ID, 
+       TblProIssDetail.UOM_ID, 
+       TblProIssDetail.DESCRIPTION, 
+       TblProIssDetail.QTY, 
+       TblProIssDetail.CREATED_DATE, 
+       TblProIssDetail.CREATED_BY, 
+       TblProIssDetail.UPDATED_DATE, 
+       TblProIssDetail.UPDATED_BY, 
+       TblItemL4.ITEM_L4_ID AS ITEM_L4ID1, 
+       TblUom.NAME, 
+       TblUom.ID AS ID1"
+  FromList="TBL_PRO_ISS_DETAIL TblProIssDetail, TBL_ITEM_L4 TblItemL4, TBL_UOM TblUom"
+  Where="TblProIssDetail.ITEM_L4_ID = TblItemL4.ITEM_L4_ID             
+and TblItemL4.UOM_ID = TblUom.ID">
+  <ViewAccessor
+    Name="ItemL4_Name_LOV1"
+    ViewObjectName="model.LOV.ItemL4_Name_LOV"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Unit_of_Measurement_LOV1"
+    ViewObjectName="model.LOV.Unit_of_Measurement_LOV"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ItemL4Id"
+    ListVOName="ItemL4_Name_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ItemL4Id"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="UomId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ItemL4Id"/>
+      <Item Value="UomId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_UomId"
+    ListVOName="Unit_of_Measurement_LOV1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="UomId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="TblProIssDetail"
+    Entity="model.ERP.EO.TblProIssDetail"/>
+  <EntityUsage
+    Name="TblItemL4"
+    Entity="model.ERP.EO.TblItemL4"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblUom"
+    Entity="model.ERP.EO.TblUom"
+    ReadOnly="true"
+    DeleteParticipant="false">
+    <DesignTime>
+      <Attr Name="_customjoin" Value="true"/>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblProIssDetail"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="ProIssMasterId"
+    PrecisionRule="true"
+    EntityAttrName="ProIssMasterId"
+    EntityUsage="TblProIssDetail"
+    AliasName="PRO_ISS_MASTER_ID"/>
+  <ViewAttribute
+    Name="SrNo"
+    PrecisionRule="true"
+    EntityAttrName="SrNo"
+    EntityUsage="TblProIssDetail"
+    AliasName="SR_NO"/>
+  <ViewAttribute
+    Name="ItemL4Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblProIssDetail"
+    AliasName="ITEM_L4_ID"
+    LOVName="LOV_ItemL4Id">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="UomId"
+    PrecisionRule="true"
+    EntityAttrName="UomId"
+    EntityUsage="TblProIssDetail"
+    AliasName="UOM_ID"
+    LOVName="LOV_UomId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Description"
+    PrecisionRule="true"
+    EntityAttrName="Description"
+    EntityUsage="TblProIssDetail"
+    AliasName="DESCRIPTION"/>
+  <ViewAttribute
+    Name="Qty"
+    PrecisionRule="true"
+    EntityAttrName="Qty"
+    EntityUsage="TblProIssDetail"
+    AliasName="QTY"/>
+  <ViewAttribute
+    Name="CreatedDate"
+    PrecisionRule="true"
+    EntityAttrName="CreatedDate"
+    EntityUsage="TblProIssDetail"
+    AliasName="CREATED_DATE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="TblProIssDetail"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedDate"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedDate"
+    EntityUsage="TblProIssDetail"
+    AliasName="UPDATED_DATE"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="TblProIssDetail"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="ItemL4Id1"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblItemL4"
+    AliasName="ITEM_L4ID1"/>
+  <ViewAttribute
+    Name="UOMName"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblUom"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Id1"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="TblUom"
+    AliasName="ID1"/>
+  <ViewLinkAccessor
+    Name="TblProIssDetailDView"
+    ViewLink="model.ERP.VO.FKTblProIssDetailDFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

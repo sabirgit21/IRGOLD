@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>Header</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelSplitter orientation="vertical" splitterPosition="70" id="pt_ps1">
+        <f:facet name="first">
+            <af:panelGridLayout id="pt_pgl1" styleClass="theme_color">
+                <af:gridRow marginTop="5px" height="auto" id="pt_gr1">
+                    <af:gridCell marginStart="5px" width="20%" id="pt_gc2">
+                        <af:spacer width="20" height="10" id="pt_s2"/>
+                        <!--<af:link icon="/imageservlet?imageNameParam=${sessionScope.sessCmpnyImg}"
+                             action="/faces/Main_Pages/Group/Company/SBU/Modules/ModuleBoard.jsf" id="pt_l1"/>-->
+                        <af:link icon="#{resource['images:ircoca.png']}"
+                                 action="/faces/Main_Pages/Group/Company/SBU/Modules/ModuleBoard.jsf" id="pt_l11"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="80%" halign="end" valign="bottom" marginEnd="5px" id="pt_gc3">
+                        <af:panelGridLayout id="pt_pgl4">
+                            <af:gridRow marginTop="5px" height="auto" id="pt_gr4">
+                                <af:gridCell marginStart="5px" width="50%" id="pt_gc5"></af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" halign="end" valign="bottom" marginEnd="5px"
+                                             id="pt_gc6">
+                                    <!--<af:image source="#{resource['images:punjab_agri_e_logo.png']}" id="pt_i2"
+                                      inlineStyle="width:105px; height:75px; margin-top:2%;"/>-->
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
+                                <af:gridCell marginStart="5px" width="50%" id="pt_gc7"></af:gridCell>
+                                <af:gridCell marginStart="5px" width="50%" halign="end" valign="bottom" marginEnd="5px"
+                                             id="pt_gc8">
+                                    <af:panelGroupLayout id="pt_pgl5" layout="horizontal" valign="bottom">
+                                        <af:panelGroupLayout id="pt_pgl2" layout="horizontal">
+                                         <!--<af:outputLabel value="Welcome.." id="pt_ol1"
+                                                        inlineStyle="text-transform: capitalize; font-size:medium; color: #145c9e;"/>-->
+                                            <af:outputLabel value="${sessionScope.sessPortalName}" id="pt_ol2"
+                                                        inlineStyle="text-transform: capitalize; color:#a67f48;"/>
+                                                   
+                                       
+                                       
+                                        <af:spacer width="20" height="10" id="pt_s3"/>
+                                        <af:link id="pt_l2" icon="#{resource['images:back_to_home.png']}"
+                                                 action="/faces/Main_Pages/Group/Company/SBU/Modules/ModuleBoard.jsf"
+                                                 text="Back to Module" inlineStyle="color:#a67f48;font-weight: bold;"/>
+                                        <af:spacer width="10" height="10" id="pt_s4"/>
+                                        <af:link id="pt_l3" icon="#{resource['images:logout.png']}"
+                                        inlineStyle="color:#a67f48;font-weight: bold;"
+                                                 action="#{LoginsBean.logout_action}" text="Logout"/>
+                                        <af:spacer width="20" height="10" id="pt_s1"/>
+                                    </af:panelGroupLayout>
+                                     </af:panelGroupLayout>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+    </af:panelSplitter>
+</af:pageTemplateDef>
