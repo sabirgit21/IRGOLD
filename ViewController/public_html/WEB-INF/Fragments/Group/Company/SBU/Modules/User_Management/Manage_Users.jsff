@@ -134,7 +134,7 @@
           </af:gridCell>
         </af:gridRow>
         <af:gridRow marginTop="5px" height="auto" id="gr3">
-          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
+          <af:gridCell marginStart="5px" halign="center" width="100%" marginEnd="5px" id="gc3">
             <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
                        disabled="#{!bindings.CreateInsert.enabled}" id="b2"/>
             <af:button actionListener="#{bindings.Execute.execute}" text="Execute"
@@ -291,15 +291,21 @@
                     </af:inputText>
                   </af:column>-->
                 </af:table>
-                <af:button actionListener="#{bindings.CreateInsert1.execute}" text="CreateInsert1"
+                <af:panelGridLayout id="pgl2">
+                 <af:gridRow marginTop="5px" height="auto" id="gr9">
+          <af:gridCell marginStart="5px" halign="center" width="100%" marginEnd="5px" id="gc9">
+           <af:button actionListener="#{bindings.CreateInsert1.execute}" text="CreateInsert1"
                            disabled="#{!bindings.CreateInsert1.enabled}" id="b5"/>
                 <af:button actionListener="#{bindings.Execute1.execute}" text="Execute1"
                            disabled="#{!bindings.Execute1.enabled}" id="b6"/>
                 <af:button actionListener="#{bindings.Delete1.execute}" text="Delete1"
                            disabled="#{!bindings.Delete1.enabled}" id="b7"/>
+          </af:gridCell>
+          </af:gridRow>
+           </af:panelGridLayout>    
               </af:showDetailItem>
               <af:showDetailItem id="sdi1" text="Group">
-                <af:panelGridLayout id="pgl2">
+                <af:panelGridLayout id="pgl5">
                   <af:gridRow marginTop="5px" height="auto" id="gr6">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                       <af:panelTabbed position="above" id="pt3">
@@ -435,10 +441,17 @@
                               </af:selectOneChoice>
                             </af:column>
                           </af:table>
+                          <af:panelGridLayout id="pgl6">
+                 <af:gridRow marginTop="5px" height="auto" id="gr10">
+          <af:gridCell marginStart="5px" halign="center" width="100%" marginEnd="5px" id="gc10">
+          <af:button actionListener="#{bindings.Execute2.execute}" text="Execute2"
+                                     disabled="#{!bindings.Execute2.enabled}" id="b9"/>
+          </af:gridCell>
+          </af:gridRow>
+          </af:panelGridLayout>
                           <!--<af:button actionListener="#{bindings.CreateInsert2.execute}" text="CreateInsert2"
                                      disabled="#{!bindings.CreateInsert2.enabled}" id="b8"/>-->
-                          <af:button actionListener="#{bindings.Execute2.execute}" text="Execute2"
-                                     disabled="#{!bindings.Execute2.enabled}" id="b9"/>
+                          
                           <!--<af:button actionListener="#{bindings.Delete2.execute}" text="Delete2"
                                      disabled="#{!bindings.Delete2.enabled}" id="b11"/>-->
                         </af:showDetailItem>
@@ -599,10 +612,17 @@
                               </af:inputText>
                             </af:column>-->
                           </af:table>
+                          <af:panelGridLayout id="pgl8">
+                 <af:gridRow marginTop="5px" height="auto" id="gr11">
+          <af:gridCell marginStart="5px" halign="center" width="100%" marginEnd="5px" id="gc11">
+          <af:button actionListener="#{bindings.Execute3.execute}" text="Execute3"
+                                     disabled="#{!bindings.Execute3.enabled}" id="b13"/>
+          </af:gridCell>
+          </af:gridRow>
+          </af:panelGridLayout>
                           <!--<af:button actionListener="#{bindings.CreateInsert3.execute}" text="CreateInsert3"
                                      disabled="#{!bindings.CreateInsert3.enabled}" id="b12"/>-->
-                          <af:button actionListener="#{bindings.Execute3.execute}" text="Execute3"
-                                     disabled="#{!bindings.Execute3.enabled}" id="b13"/>
+                          
                           <!--<af:button actionListener="#{bindings.Delete3.execute}" text="Delete3"
                                      disabled="#{!bindings.Delete3.enabled}" id="b14"/>-->
                         </af:showDetailItem>
@@ -756,10 +776,17 @@
                               </af:selectOneChoice>
                             </af:column>
                           </af:table>
+                          <af:panelGridLayout id="pgl7">
+                 <af:gridRow marginTop="5px" height="auto" id="gr12">
+          <af:gridCell marginStart="5px" halign="center" width="100%" marginEnd="5px" id="gc12">
+          <af:button actionListener="#{bindings.Execute4.execute}" text="Execute4"
+                                     disabled="#{!bindings.Execute4.enabled}" id="b16"/>
+          </af:gridCell>
+          </af:gridRow>
+          </af:panelGridLayout>
                           <!--<af:button actionListener="#{bindings.CreateInsert4.execute}" text="CreateInsert4"
                                      disabled="#{!bindings.CreateInsert4.enabled}" id="b15"/>-->
-                          <af:button actionListener="#{bindings.Execute4.execute}" text="Execute4"
-                                     disabled="#{!bindings.Execute4.enabled}" id="b16"/>
+                          
                           <!--<af:button actionListener="#{bindings.Delete4.execute}" text="Delete4"
                                      disabled="#{!bindings.Delete4.enabled}" id="b17"/>-->
                         </af:showDetailItem>
