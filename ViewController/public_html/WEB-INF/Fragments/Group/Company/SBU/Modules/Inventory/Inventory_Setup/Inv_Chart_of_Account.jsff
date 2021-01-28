@@ -33,6 +33,9 @@
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
             <af:panelTabbed position="above" id="pt1" styleClass="tabel_pannel_tab">
               <af:showDetailItem id="tab1" text="Level 1">
+               <af:button text="Get Report" id="b4" icon="#{resource['images:get_report.png']}"
+                      actionListener="#{backingBeanScope.VoucherPrintBean.getINVCOAReport}"
+                       inlineStyle="float: right;"/>
                 <af:table value="#{bindings.TblItemL1View1.collectionModel}" var="row"
                           rows="#{bindings.TblItemL1View1.rangeSize}"
                           emptyText="#{bindings.TblItemL1View1.viewable ? 'No data to display.' : 'Access Denied.'}"
