@@ -535,6 +535,28 @@
           usageId="view_PromotionPageDef"/>
     <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Payroll/Transaction/Salary_Generation.jsff"
           usageId="view_Salary_GenerationPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Parent_Student_Portal/Asses_Eval_Report_TaskFlow.xml#Asses_Eval_Report_TaskFlow@ExecuteWithParams"
+          usageId="view_Asses_Eval_Report_TaskFlow_Asses_Eval_Report_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Parent_Student_Portal/Homework_Downl_Upld_TaskFlow.xml#Homework_Downl_Upld_TaskFlow@ExecuteWithParams"
+          usageId="view_Homework_Downl_Upld_TaskFlow_Homework_Downl_Upld_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Parent_Student_Portal/Notif_Email_TaskFlow.xml#Notif_Email_TaskFlow@ExecuteWithParams"
+          usageId="view_Notif_Email_TaskFlow_Notif_Email_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Parent_Student_Portal/Weekly_Study_Plan_TaskFlow.xml#Weekly_Study_Plan_TaskFlow@ExecuteWithParams"
+          usageId="view_Weekly_Study_Plan_TaskFlow_Weekly_Study_Plan_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Parent_Student_Portal/Attd_Report_TaskFlow.xml#Attd_Report_TaskFlow@ExecuteWithParams"
+          usageId="view_Attd_Report_TaskFlow_Attd_Report_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Parent_Student_Portal/Fee_Voucher_TaskFlow.xml#Fee_Voucher_TaskFlow@ExecuteWithParams"
+          usageId="view_Fee_Voucher_TaskFlow_Fee_Voucher_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Evaluation_Module/Eval_Weightage_TaskFlow.xml#Eval_Weightage_TaskFlow@ExecuteWithParams"
+          usageId="view_Eval_Weightage_TaskFlow_Eval_Weightage_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Evaluation_Module/Assess_Types_TaskFlow.xml#Assess_Types_TaskFlow@ExecuteWithParams"
+          usageId="view_Assess_Types_TaskFlow_Assess_Types_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Evaluation_Module/Annual_Term_Wise_Eval_TaskFlow.xml#Annual_Term_Wise_Eval_TaskFlow@ExecuteWithParams"
+          usageId="view_Annual_Term_Wise_Eval_TaskFlow_Annual_Term_Wise_Eval_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Evaluation_Module/Std_Prom_TaskFlow.xml#Std_Prom_TaskFlow@ExecuteWithParams"
+          usageId="view_Std_Prom_TaskFlow_Std_Prom_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Evaluation_Module/Stdt_Schl_Leav_Transf_TaskFlow.xml#Stdt_Schl_Leav_Transf_TaskFlow@ExecuteWithParams"
+          usageId="view_Stdt_Schl_Leav_Transf_TaskFlow_Stdt_Schl_Leav_Transf_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_GroupPageDef" path="Main_Pages.Group.GroupPageDef"/>
@@ -1034,6 +1056,28 @@
     <page id="view_PromotionPageDef" path="Fragments.Group.Company.SBU.Modules.Payroll.Transaction.PromotionPageDef"/>
     <page id="view_Salary_GenerationPageDef"
           path="Fragments.Group.Company.SBU.Modules.Payroll.Transaction.Salary_GenerationPageDef"/>
+    <page id="view_Asses_Eval_Report_TaskFlow_Asses_Eval_Report_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Parent_Student_Portal.Asses_Eval_Report_TaskFlow_Asses_Eval_Report_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Homework_Downl_Upld_TaskFlow_Homework_Downl_Upld_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Parent_Student_Portal.Homework_Downl_Upld_TaskFlow_Homework_Downl_Upld_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Notif_Email_TaskFlow_Notif_Email_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Parent_Student_Portal.Notif_Email_TaskFlow_Notif_Email_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Weekly_Study_Plan_TaskFlow_Weekly_Study_Plan_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Parent_Student_Portal.Weekly_Study_Plan_TaskFlow_Weekly_Study_Plan_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Attd_Report_TaskFlow_Attd_Report_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Parent_Student_Portal.Attd_Report_TaskFlow_Attd_Report_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Fee_Voucher_TaskFlow_Fee_Voucher_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Parent_Student_Portal.Fee_Voucher_TaskFlow_Fee_Voucher_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Eval_Weightage_TaskFlow_Eval_Weightage_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Eval_Weightage_TaskFlow_Eval_Weightage_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assess_Types_TaskFlow_Assess_Types_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Assess_Types_TaskFlow_Assess_Types_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Annual_Term_Wise_Eval_TaskFlow_Annual_Term_Wise_Eval_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Annual_Term_Wise_Eval_TaskFlow_Annual_Term_Wise_Eval_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Std_Prom_TaskFlow_Std_Prom_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Std_Prom_TaskFlow_Std_Prom_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Stdt_Schl_Leav_Transf_TaskFlow_Stdt_Schl_Leav_Transf_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Stdt_Schl_Leav_Transf_TaskFlow_Stdt_Schl_Leav_Transf_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   
   <!--<pageDefinitionUsages>
