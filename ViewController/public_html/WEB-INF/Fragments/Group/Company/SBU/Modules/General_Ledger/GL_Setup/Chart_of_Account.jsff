@@ -29,14 +29,23 @@
      
         <af:gridRow marginTop="5px" height="auto" id="gr1">
           <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
+             
             <af:panelTabbed position="above" id="pt6">
               <af:showDetailItem id="tab3" text="Level 1">
  
                 <af:panelGridLayout id="pgl13">
                   <af:gridRow marginTop="5px" height="auto" id="gr26">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc26">
+                     
+                      
+                       
                       <af:panelTabbed position="above" id="pt7">
+                      
                         <af:showDetailItem id="tab4" text="Level 1">
+                        <af:button text="Get Report" id="b4" icon="#{resource['images:get_report.png']}"
+                      actionListener="#{backingBeanScope.VoucherPrintBean.getGLCOAReport}"
+                       inlineStyle="float: right;"/>
+                     
                           <af:panelFormLayout id="pfl4">
                             <af:inputText value="#{bindings.GlL1Id.inputValue}" label="ID"
                                           required="#{bindings.GlL1Id.hints.mandatory}"

@@ -270,22 +270,7 @@
                           filterModel="#{bindings.TblPcpMView1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.TblPcpMView1Query.processQuery}" varStatus="vs" id="t1"
                           scrollPolicy="page" autoHeightRows="0">
-                 <af:column sortProperty="#{bindings.TblPcpMView1.hints.Id.name}" filterable="true" sortable="true"
-                             headerText="ID" id="c1" visible="false">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Id}"
-       id="it25" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-                    <af:inputText value="#{row.bindings.Id.inputValue}" label="#{bindings.TblPcpMView1.hints.Id.label}"
-                                  required="#{bindings.TblPcpMView1.hints.Id.mandatory}"
-                                  columns="#{bindings.TblPcpMView1.hints.Id.displayWidth}"
-                                  maximumLength="#{bindings.TblPcpMView1.hints.Id.precision}"
-                                  shortDesc="#{bindings.TblPcpMView1.hints.Id.tooltip}" id="it5" readOnly="true" >
-                      <f:validator binding="#{row.bindings.Id.validator}"/>
-                      <af:convertNumber groupingUsed="false" pattern="#{bindings.TblPcpMView1.hints.Id.format}"/>
-                    </af:inputText>
-                  </af:column>
+                
                   <af:column sortProperty="#{bindings.TblPcpMView1.hints.Vno.name}" filterable="true" sortable="true"
                              headerText="Voucher No." id="c2">
                              <f:facet name="filter">
@@ -363,7 +348,7 @@
                     </af:selectOneChoice>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblPcpMView1.hints.Narration.name}" filterable="true"
-                             sortable="true" headerText="Narration" id="c7" width="400">
+                             sortable="true" headerText="Narration" id="c7" width="300">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.Narration}"
        id="it7" placeholder="Search ">
@@ -378,6 +363,27 @@
                       <f:validator binding="#{row.bindings.Narration.validator}"/>
                     </af:inputText>
                   </af:column>
+                  
+                   
+                  
+                  
+                  
+                  
+                   <af:column sortProperty="#{bindings.TblPcpMView1.hints.Id.name}" filterable="true" sortable="true"
+                             headerText="Get Report" id="c1223">
+                    <af:link shortDesc="#{bindings.TblPcpMView1.hints.Id.tooltip}" id="it44"
+                    icon="#{resource['images:get_report.png']}"
+                             actionListener="#{backingBeanScope.VoucherPrintBean.getPCPReport}">
+                   <f:attribute name="sendPCPMID" value="#{row.bindings.Id.inputValue}"/>
+                </af:link>
+                    
+                  </af:column>
+                  
+                  
+                  
+                  
+                  
+                  
                 </af:table>
               </af:showDetailItem>
             </af:panelTabbed>
