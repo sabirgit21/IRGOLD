@@ -1300,6 +1300,12 @@
   <ViewUsage
     Name="TblGradeAllowanceView3"
     ViewObjectName="model.ERP.VO.TblGradeAllowanceView"/>
+  <ViewUsage
+    Name="Bank_Setup1"
+    ViewObjectName="model.ERP.VO.Bank_Setup"/>
+  <ViewUsage
+    Name="Cash_Setup1"
+    ViewObjectName="model.ERP.VO.Cash_Setup"/>
   <ViewLinkUsage
     Name="FkAgePolicyAcadYearLink1"
     ViewLinkObjectName="model.ERP.VO.FkAgePolicyAcadYearLink"
