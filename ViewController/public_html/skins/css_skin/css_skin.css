@@ -53,7 +53,7 @@ af|button {
 }
 
 af|button::link {
-    background-color: #EDE5DA !important;
+    background-color: white !important;
 }
 af|button:hover::link {
     background-color: #a67f48 !important;
