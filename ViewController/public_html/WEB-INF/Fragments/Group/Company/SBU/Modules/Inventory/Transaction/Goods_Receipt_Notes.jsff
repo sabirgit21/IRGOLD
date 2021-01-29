@@ -350,27 +350,7 @@
                           filterModel="#{bindings.TblGrnMView1Query.queryDescriptor}" filterVisible="true"
                           queryListener="#{bindings.TblGrnMView1Query.processQuery}" varStatus="vs" id="t1"
                           scrollPolicy="page" autoHeightRows="0">
-                  <af:column sortProperty="#{bindings.TblGrnMView1.hints.Id.name}" filterable="true"
-                             sortable="true" headerText="ID"
-                             id="c17" align="right" visible="false">
-                             <f:facet name="filter">
-      <af:inputText value="#{vs.filterCriteria.Id}"
-       id="id4" placeholder="Search ">
-      </af:inputText>
-</f:facet>
-
-                    <af:inputText value="#{row.bindings.Id.inputValue}"
-                                  label="#{bindings.TblGrnMView1.hints.Id.label}"
-                                  required="#{bindings.TblGrnMView1.hints.Id.mandatory}"
-                                  columns="#{bindings.TblGrnMView1.hints.Id.displayWidth}"
-                                  maximumLength="#{bindings.TblGrnMView1.hints.Id.precision}"
-                                  shortDesc="#{bindings.TblGrnMView1.hints.Id.tooltip}" id="it14"
-                                  readOnly="true">
-                      <f:validator binding="#{row.bindings.Id.validator}"/>
-                      <af:convertNumber groupingUsed="false"
-                                        pattern="#{bindings.TblGrnMView1.hints.Id.format}"/>
-                    </af:inputText>
-                  </af:column>
+                  
                   <af:column sortProperty="#{bindings.TblGrnMView1.hints.Vno.name}" filterable="true"
                              sortable="true" headerText="Voucher No."
                              id="c18" align="left">
@@ -422,7 +402,7 @@
                       <af:convertDateTime pattern="#{bindings.TblGrnMView1.hints.Dated.format}"/>
                     </af:inputDate>
                   </af:column>
-                  <af:column headerText="Project" id="c15" sortable="true" filterable="true">
+                  <af:column headerText="Company" id="c15" sortable="true" filterable="true" width="150">
                    <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.CompanySbuId}"
        id="it58" placeholder="Search ">
@@ -531,6 +511,25 @@
                       <f:validator binding="#{row.bindings.Narration.validator}"/>
                     </af:inputText>
                   </af:column>
+                  
+                 
+                  
+                  
+                  
+                  
+                   <af:column sortProperty="#{bindings.TblGrnMView1.hints.Id.name}" filterable="true" sortable="true"
+                             headerText="Get Report" id="c7">
+                    <af:link shortDesc="#{bindings.TblGrnMView1.hints.Id.tooltip}" id="l1"
+                    icon="#{resource['images:get_report.png']}"
+                             actionListener="#{backingBeanScope.VoucherPrintBean.getGRNReport}">
+                   <f:attribute name="sendGRNID" value="#{row.bindings.Id.inputValue}"/>
+                </af:link>
+                    
+                  </af:column>
+                  
+                  
+                  
+                  
                 </af:table>
                 
               </af:showDetailItem>
