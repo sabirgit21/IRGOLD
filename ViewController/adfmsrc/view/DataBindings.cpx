@@ -557,6 +557,12 @@
           usageId="view_Std_Prom_TaskFlow_Std_Prom_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/School_Management_System/Evaluation_Module/Stdt_Schl_Leav_Transf_TaskFlow.xml#Stdt_Schl_Leav_Transf_TaskFlow@ExecuteWithParams"
           usageId="view_Stdt_Schl_Leav_Transf_TaskFlow_Stdt_Schl_Leav_Transf_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Bank_Cash/Bank_Cash_Setup/Bank_Setup_TaskFlow.xml#Bank_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Bank_Cash/Bank_Cash_Setup/Cash_Setup_TaskFlow.xml#Cash_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/Main_Pages/Group/Company/SBU/Modules/Bank_Cash/BankCashModuleBoard.jsf"
+          usageId="view_BankCashModuleBoardPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_GroupPageDef" path="Main_Pages.Group.GroupPageDef"/>
@@ -1078,6 +1084,12 @@
           path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Std_Prom_TaskFlow_Std_Prom_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Stdt_Schl_Leav_Transf_TaskFlow_Stdt_Schl_Leav_Transf_TaskFlow_ExecuteWithParamsPageDef"
           path="TaskFlows.Group.Company.SBU.Modules.School_Management_System.Evaluation_Module.Stdt_Schl_Leav_Transf_TaskFlow_Stdt_Schl_Leav_Transf_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Bank_Setup_TaskFlow_Bank_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_BankCashModuleBoardPageDef"
+          path="Main_Pages.Group.Company.SBU.Modules.Bank_Cash.BankCashModuleBoardPageDef"/>
   </pageDefinitionUsages>
   
   <!--<pageDefinitionUsages>

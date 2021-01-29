@@ -310,9 +310,11 @@ public class Login {
             return "/faces/Main_Pages/Group/Company/SBU/Modules/Inventory/InventoryModuleBoard.jsf?faces-redirect=true";
         } else if (module_ID == 6) {
             return "/faces/Main_Pages/Group/Company/SBU/Modules/Sales/SalesModuleBoard.jsf?faces-redirect=true";
-        } else if (module_ID == 7) {
-            return "/faces/Main_Pages/Group/Company/SBU/Modules/Production/ProductionModuleBoard.jsf?faces-redirect=true";
-        } else {
+            } else if (module_ID == 7) {
+                return "/faces/Main_Pages/Group/Company/SBU/Modules/Production/ProductionModuleBoard.jsf?faces-redirect=true";
+            }  else if (module_ID == 8) {
+                return "/faces/Main_Pages/Group/Company/SBU/Modules/Bank_Cash/BankCashModuleBoard.jsf?faces-redirect=true";
+            } else {
             System.out.println("-----nothing");
             return "good";
         }

@@ -311,6 +311,9 @@
     Name="Evaluation_Pages1"
     ViewObjectName="model.UserRoles.VO.Evaluation_Pages"/>
   <ViewUsage
+    Name="Bank_Cash_Pages1"
+    ViewObjectName="model.UserRoles.VO.Bank_Cash_Pages"/>
+  <ViewUsage
     Name="Parent_Student_Portal_Pages1"
     ViewObjectName="model.UserRoles.VO.Parent_Student_Portal_Pages"/>
   <ViewLinkUsage
