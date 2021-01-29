@@ -563,6 +563,10 @@
           usageId="view_Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/Main_Pages/Group/Company/SBU/Modules/Bank_Cash/BankCashModuleBoard.jsf"
           usageId="view_BankCashModuleBoardPageDef"/>
+    <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Bank_Cash/Bank_Cash_Setup/Bank_Setup.jsff"
+          usageId="view_Bank_SetupPageDef"/>
+    <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Bank_Cash/Bank_Cash_Setup/Cash_Setup.jsff"
+          usageId="view_Cash_SetupPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_GroupPageDef" path="Main_Pages.Group.GroupPageDef"/>
@@ -1090,6 +1094,10 @@
           path="TaskFlows.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Cash_Setup_TaskFlow_Cash_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_BankCashModuleBoardPageDef"
           path="Main_Pages.Group.Company.SBU.Modules.Bank_Cash.BankCashModuleBoardPageDef"/>
+    <page id="view_Bank_SetupPageDef"
+          path="Fragments.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Bank_SetupPageDef"/>
+    <page id="view_Cash_SetupPageDef"
+          path="Fragments.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Cash_SetupPageDef"/>
   </pageDefinitionUsages>
   
   <!--<pageDefinitionUsages>
