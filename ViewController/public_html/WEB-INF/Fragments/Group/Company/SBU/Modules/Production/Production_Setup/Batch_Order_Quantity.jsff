@@ -281,7 +281,7 @@
                     </af:inputText>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblBoqDetailView2.hints.SrNo.name}" filterable="true"
-                             sortable="true" headerText="Serial No." id="c2" visible="false">
+                             sortable="true" headerText="Serial No." id="c6" visible="false">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.SrNo}"
        id="it13" placeholder="Search ">

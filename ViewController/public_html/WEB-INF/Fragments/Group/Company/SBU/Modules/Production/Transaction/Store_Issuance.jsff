@@ -235,6 +235,17 @@
                       <f:validator binding="#{row.bindings.Narration.validator}"/>
                     </af:inputText>
                   </af:column>
+                  
+                  
+                  <af:column sortProperty="#{bindings.TblProIssMasterView1.hints.Id.name}" filterable="true" sortable="true"
+                             headerText="Get Report" id="c8">
+                    <af:link shortDesc="#{bindings.TblProIssMasterView1.hints.Id.tooltip}" id="l1"
+                    icon="#{resource['images:get_report.png']}"
+                            actionListener="#{backingBeanScope.VoucherPrintBean.getProIssMasterReport}">
+                   <f:attribute name="sendProIssMID" value="#{row.bindings.Id.inputValue}"/>
+                </af:link>
+                    
+                  </af:column>
                 </af:table>
                 
               </af:showDetailItem>

@@ -466,4 +466,78 @@ public class VoucherPrint {
         System.out.println("Url => " + url);
         reportBean.openUrlInNewWindow(url);
     }
+
+
+    public void getFGTReport(ActionEvent actionEvent) {
+        // Add event code here...
+        String url = "";
+        BigDecimal sendFGTID = (BigDecimal) actionEvent.getComponent().getAttributes().get("sendFGTID");
+        reportBean.setReportParameter("P_Fgt_M_id", sendFGTID.toString());
+        
+        reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Finish_Goods_Transfer_Detail&");
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
+                                        "CACHE"); // which will be one of the [cashe - file - mail - printer]
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESFORMAT,
+                                        "PDF"); // Which will be onr of the [HTML - HTML CSS - PDF - SPREADSHEET- RTF].
+        reportBean.setReportParameter("paramform", "no");
+
+        url = reportBean.getReportServerURL();
+        System.out.println("Url => " + url);
+        reportBean.openUrlInNewWindow(url);
+    }
+    
+    public void getProFgReport(ActionEvent actionEvent) {
+        // Add event code here...
+        String url = "";
+        BigDecimal sendProFgID = (BigDecimal) actionEvent.getComponent().getAttributes().get("sendProFgID");
+        reportBean.setReportParameter("P_Pro_Fg_M_id", sendProFgID.toString());
+        
+        reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Production_Finish_Goods_Detail&");
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
+                                        "CACHE"); // which will be one of the [cashe - file - mail - printer]
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESFORMAT,
+                                        "PDF"); // Which will be onr of the [HTML - HTML CSS - PDF - SPREADSHEET- RTF].
+        reportBean.setReportParameter("paramform", "no");
+
+        url = reportBean.getReportServerURL();
+        System.out.println("Url => " + url);
+        reportBean.openUrlInNewWindow(url);
+    }
+    public void getPorMasterReport(ActionEvent actionEvent) {
+        // Add event code here...
+        String url = "";
+        BigDecimal sendPorMasterID = (BigDecimal) actionEvent.getComponent().getAttributes().get("sendPorMasterID");
+        reportBean.setReportParameter("P_Pro_M_id", sendPorMasterID.toString());
+        
+        reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Production_Order_Detail&");
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
+                                        "CACHE"); // which will be one of the [cashe - file - mail - printer]
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESFORMAT,
+                                        "PDF"); // Which will be onr of the [HTML - HTML CSS - PDF - SPREADSHEET- RTF].
+        reportBean.setReportParameter("paramform", "no");
+
+        url = reportBean.getReportServerURL();
+        System.out.println("Url => " + url);
+        reportBean.openUrlInNewWindow(url);
+    }
+    
+    
+    public void getProIssMasterReport(ActionEvent actionEvent) {
+        // Add event code here...
+        String url = "";
+        BigDecimal sendProIssMID = (BigDecimal) actionEvent.getComponent().getAttributes().get("sendProIssMID");
+        reportBean.setReportParameter("P_Pro_Iss_M_id", sendProIssMID.toString());
+        
+        reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Production_Issuance_Detail&");
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
+                                        "CACHE"); // which will be one of the [cashe - file - mail - printer]
+        reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESFORMAT,
+                                        "PDF"); // Which will be onr of the [HTML - HTML CSS - PDF - SPREADSHEET- RTF].
+        reportBean.setReportParameter("paramform", "no");
+
+        url = reportBean.getReportServerURL();
+        System.out.println("Url => " + url);
+        reportBean.openUrlInNewWindow(url);
+    }
+    
 }
