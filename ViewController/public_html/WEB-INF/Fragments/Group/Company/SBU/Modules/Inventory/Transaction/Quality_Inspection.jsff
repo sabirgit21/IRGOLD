@@ -49,7 +49,7 @@
                             </af:inputDate>
                             <af:spacer  id="s5"/>
                             <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}"
-                                                label="Company"
+                                                label="Company SBU"
                                                 required="#{bindings.CompanySbuId.hints.mandatory}"
                                                 shortDesc="#{bindings.CompanySbuId.hints.tooltip}" id="soc6" 
                                                 contentStyle="width:150px;"

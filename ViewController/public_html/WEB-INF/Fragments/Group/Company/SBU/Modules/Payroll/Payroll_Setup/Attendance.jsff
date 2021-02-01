@@ -61,7 +61,7 @@
                             
                             <af:spacer  id="s7"/>
                             <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}"
-                                                label="Company"
+                                                label="Company SBU"
                                                 required="#{bindings.CompanySbuId.hints.mandatory}"
                                                 shortDesc="#{bindings.CompanySbuId.hints.tooltip}" id="soc2" disabled="true"
                                                 contentStyle="width:150px;">
@@ -302,7 +302,7 @@
                     </af:inputDate>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblAttMView1.hints.CompanySbuId.name}" filterable="true"
-                             sortable="true" headerText="Company" id="c5" width="200">
+                             sortable="true" headerText="Company SBU" id="c5" width="200">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.CompanySbuId}"
        id="it9" placeholder="Search ">

@@ -107,7 +107,7 @@
                               </af:inputDate>
                             </af:column>
                             <af:column sortProperty="#{bindings.TblEmpView1.hints.CompanySbuId.name}" filterable="true"
-                                       sortable="true" headerText="Company"
+                                       sortable="true" headerText="Company SBU"
                                        id="c5" width="150">
                                         <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.CompanySbuId}"

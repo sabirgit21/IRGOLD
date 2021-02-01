@@ -73,7 +73,7 @@
                               <f:validator binding="#{bindings.Narration.validator}"/>
                             </af:inputText>
                   <af:spacer  id="s6"/>
-                  <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}" label="Company"
+                  <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}" label="Company SBU"
                                       required="#{bindings.CompanySbuId.hints.mandatory}"
                                       shortDesc="#{bindings.CompanySbuId.hints.tooltip}" id="soc6" disabled="true"
                                       contentStyle="width:150px;" >
@@ -402,7 +402,7 @@
                       <af:convertDateTime pattern="#{bindings.TblGrnMView1.hints.Dated.format}"/>
                     </af:inputDate>
                   </af:column>
-                  <af:column headerText="Company" id="c15" sortable="true" filterable="true" width="150">
+                  <af:column headerText="Company SBU" id="c15" sortable="true" filterable="true" width="150">
                    <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.CompanySbuId}"
        id="it58" placeholder="Search ">

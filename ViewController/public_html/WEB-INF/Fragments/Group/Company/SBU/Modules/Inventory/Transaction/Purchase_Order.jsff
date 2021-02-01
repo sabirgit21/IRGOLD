@@ -78,7 +78,7 @@
                   </af:inputText>
                   
                   <af:spacer  id="s16"/>
-                  <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}" label="Comapny"
+                  <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}" label="Comapny SBU"
                                       required="#{bindings.CompanySbuId.hints.mandatory}"
                                       shortDesc="#{bindings.CompanySbuId.hints.tooltip}" id="soc6" disabled="true"
                                       contentStyle="width:135px;" >
@@ -528,7 +528,7 @@
                       <af:convertDateTime pattern="#{bindings.TblPoMView1.hints.Dated.format}"/>
                     </af:inputDate>
                   </af:column>
-                  <af:column headerText="Company" id="c15" sortable="true" filterable="true">
+                  <af:column headerText="Company SBU" id="c15" sortable="true" filterable="true">
                    <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.CompanySbuId}"
        id="it58" placeholder="Search ">

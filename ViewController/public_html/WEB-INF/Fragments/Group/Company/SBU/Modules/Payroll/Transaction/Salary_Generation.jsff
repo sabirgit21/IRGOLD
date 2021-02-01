@@ -49,7 +49,7 @@
                             </af:inputDate>
                             <af:spacer  id="s6"/>
                             <af:selectOneChoice value="#{bindings.CompanySbuId.inputValue}"
-                                                label="Company"
+                                                label="Company SBU"
                                                 required="#{bindings.CompanySbuId.hints.mandatory}"
                                                 shortDesc="#{bindings.CompanySbuId.hints.tooltip}" id="soc1" readOnly="${sessionScope.sessPrID != ''}"
                                                 contentStyle="width:150px;">
@@ -623,7 +623,7 @@
                     </af:inputDate>
                   </af:column>
                   <af:column sortProperty="#{bindings.TblSalaryMView1.hints.CompanySbuId.name}" filterable="true"
-                             sortable="true" headerText="Company" id="c24" width="150">
+                             sortable="true" headerText="Company SBU" id="c24" width="150">
                               <f:facet name="filter">
       <af:inputText value="#{vs.filterCriteria.CompanySbuId}"
        id="it50" placeholder="Search ">
