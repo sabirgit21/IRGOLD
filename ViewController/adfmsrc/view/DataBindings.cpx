@@ -567,7 +567,7 @@
           usageId="view_Bank_SetupPageDef"/>
     <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Bank_Cash/Bank_Cash_Setup/Cash_Setup.jsff"
           usageId="view_Cash_SetupPageDef"/>
-    <page path="/Main_Pages/Group/Company/SBU/Modules/Fixed_Assets/Fixed_Assets.jsf"
+    <page path="/Main_Pages/Group/Company/SBU/Modules/Fixed_Assets/FixedAssetsModuleBoard.jsf"
           usageId="view_Fixed_AssetsPageDef"/>
     <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Fixed_Assets_Setup/Chart_of_Account_TaskFlow.xml#Chart_of_Account_TaskFlow@ExecuteWithParams"
           usageId="view_Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef1"/>
