@@ -314,6 +314,8 @@ public class Login {
                 return "/faces/Main_Pages/Group/Company/SBU/Modules/Production/ProductionModuleBoard.jsf?faces-redirect=true";
             }  else if (module_ID == 8) {
                 return "/faces/Main_Pages/Group/Company/SBU/Modules/Bank_Cash/BankCashModuleBoard.jsf?faces-redirect=true";
+            } else if (module_ID == 9) {
+                return "/faces/Main_Pages/Group/Company/SBU/Modules/Fixed_Assets/FixedAssetsModuleBoard.jsf?faces-redirect=true";
             } else {
             System.out.println("-----nothing");
             return "good";

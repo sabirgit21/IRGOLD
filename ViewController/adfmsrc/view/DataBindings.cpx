@@ -567,6 +567,22 @@
           usageId="view_Bank_SetupPageDef"/>
     <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Bank_Cash/Bank_Cash_Setup/Cash_Setup.jsff"
           usageId="view_Cash_SetupPageDef"/>
+    <page path="/Main_Pages/Group/Company/SBU/Modules/Fixed_Assets/FixedAssetsModuleBoard.jsf"
+          usageId="view_Fixed_AssetsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Fixed_Assets_Setup/Chart_of_Account_TaskFlow.xml#Chart_of_Account_TaskFlow@ExecuteWithParams"
+          usageId="view_Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef1"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Requisition_TaskFlow.xml#Assets_Requisition_TaskFlow@ExecuteWithParams"
+          usageId="view_Assets_Requisition_TaskFlow_Assets_Requisition_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Order_TaskFlow.xml#Assets_Order_TaskFlow@ExecuteWithParams"
+          usageId="view_Assets_Order_TaskFlow_Assets_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Purchase_TaskFlow.xml#Assets_Purchase_TaskFlow@ExecuteWithParams"
+          usageId="view_Assets_Purchase_TaskFlow_Assets_Purchase_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Return_TaskFlow.xml#Assets_Return_TaskFlow@ExecuteWithParams"
+          usageId="view_Assets_Return_TaskFlow_Assets_Return_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Waranty_Claim_TaskFlow.xml#Assets_Waranty_Claim_TaskFlow@ExecuteWithParams"
+          usageId="view_Assets_Waranty_Claim_TaskFlow_Assets_Waranty_Claim_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Depriciation_TaskFlow.xml#Assets_Depriciation_TaskFlow@ExecuteWithParams"
+          usageId="view_Assets_Depriciation_TaskFlow_Assets_Depriciation_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_GroupPageDef" path="Main_Pages.Group.GroupPageDef"/>
@@ -1098,6 +1114,21 @@
           path="Fragments.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Bank_SetupPageDef"/>
     <page id="view_Cash_SetupPageDef"
           path="Fragments.Group.Company.SBU.Modules.Bank_Cash.Bank_Cash_Setup.Cash_SetupPageDef"/>
+    <page id="view_Fixed_AssetsPageDef" path="Main_Pages.Group.Company.SBU.Modules.Fixed_Assets.Fixed_AssetsPageDef"/>
+    <page id="view_Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef1"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Fixed_Assets_Setup.Chart_of_Account_TaskFlow_Chart_of_Account_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assets_Requisition_TaskFlow_Assets_Requisition_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Requisition_TaskFlow_Assets_Requisition_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assets_Order_TaskFlow_Assets_Order_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Order_TaskFlow_Assets_Order_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assets_Purchase_TaskFlow_Assets_Purchase_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Purchase_TaskFlow_Assets_Purchase_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assets_Return_TaskFlow_Assets_Return_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Return_TaskFlow_Assets_Return_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assets_Waranty_Claim_TaskFlow_Assets_Waranty_Claim_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Waranty_Claim_TaskFlow_Assets_Waranty_Claim_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Assets_Depriciation_TaskFlow_Assets_Depriciation_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Depriciation_TaskFlow_Assets_Depriciation_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   
   <!--<pageDefinitionUsages>
