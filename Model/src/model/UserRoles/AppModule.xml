@@ -311,11 +311,17 @@
     Name="Evaluation_Pages1"
     ViewObjectName="model.UserRoles.VO.Evaluation_Pages"/>
   <ViewUsage
+    Name="Parent_Student_Portal_Pages1"
+    ViewObjectName="model.UserRoles.VO.Parent_Student_Portal_Pages"/>
+  <ViewUsage
     Name="Bank_Cash_Pages1"
     ViewObjectName="model.UserRoles.VO.Bank_Cash_Pages"/>
   <ViewUsage
-    Name="Parent_Student_Portal_Pages1"
-    ViewObjectName="model.UserRoles.VO.Parent_Student_Portal_Pages"/>
+    Name="Fixed_Assets_Transaction_Pages1"
+    ViewObjectName="model.UserRoles.VO.Fixed_Assets_Transaction_Pages"/>
+  <ViewUsage
+    Name="Fixed_Assets_Setup_Pages1"
+    ViewObjectName="model.UserRoles.VO.Fixed_Assets_Setup_Pages"/>
   <ViewLinkUsage
     Name="FkCompanySbuCoCompanyLink1"
     ViewLinkObjectName="model.UserRoles.VO.FkCompanySbuCoCompanyLink"
