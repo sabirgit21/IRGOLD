@@ -1,0 +1,7 @@
+//Groovy Scripts for model.ERP.VO.TblEmpView
+
+package model.ERP.VO
+
+import oracle.jbo.script.annotation.VariableExpression;
+
+

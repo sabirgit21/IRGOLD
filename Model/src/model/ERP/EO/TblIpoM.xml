@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="TBL_IPO_M"
   AliasName="TblIpoM"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="model.ERP.EO.TblIpoMImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Id"
     ColumnName="ID"
@@ -117,12 +122,11 @@
     Name="CompanySbuId"
     ColumnName="COMPANY_SBU_ID"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_IPO_M">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblIpoMRow"/>
   </Attribute>
   <Attribute
@@ -143,7 +147,7 @@
     Name="CreatedBy"
     ColumnName="CREATED_BY"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_IPO_M"/>
   <Attribute
@@ -157,7 +161,7 @@
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_IPO_M"/>
   <AccessorAttribute

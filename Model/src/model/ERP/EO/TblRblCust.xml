@@ -203,7 +203,9 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_RBL_CUST"/>
+    TableName="TBL_RBL_CUST"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="CreatedBy"
     ColumnName="CREATED_BY"
@@ -217,7 +219,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_RBL_CUST"/>
+    TableName="TBL_RBL_CUST"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"

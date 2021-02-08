@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="TBL_SUPP_OPEN_BLNC"
   AliasName="TblSuppOpenBlnc"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="model.ERP.EO.TblSuppOpenBlncImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="SuppOpenBlncId"
     ColumnName="SUPP_OPEN_BLNC_ID"
@@ -26,12 +31,7 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TBL_SUPP_OPEN_BLNC">
-    <TransientExpression
-      Name="ExpressionScript"
-      trustMode="untrusted"
-      CodeSourceName="TblSuppOpenBlncRow"/>
-  </Attribute>
+    TableName="TBL_SUPP_OPEN_BLNC"/>
   <Attribute
     Name="PblSuppId"
     IsNotNull="true"
@@ -70,7 +70,6 @@
     TableName="TBL_SUPP_OPEN_BLNC">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblSuppOpenBlncRow"/>
   </Attribute>
   <Key

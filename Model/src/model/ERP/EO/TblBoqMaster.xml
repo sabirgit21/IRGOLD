@@ -102,7 +102,9 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_BOQ_MASTER"/>
+    TableName="TBL_BOQ_MASTER"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="CreatedBy"
     ColumnName="CREATED_BY"
@@ -116,7 +118,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_BOQ_MASTER"/>
+    TableName="TBL_BOQ_MASTER"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"

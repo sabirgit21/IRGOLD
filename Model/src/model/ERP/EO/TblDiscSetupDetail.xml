@@ -104,7 +104,9 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_DISC_SETUP_DETAIL"/>
+    TableName="TBL_DISC_SETUP_DETAIL"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="CreatedBy"
     ColumnName="CREATED_BY"
@@ -118,7 +120,8 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="TBL_DISC_SETUP_DETAIL"/>
+    TableName="TBL_DISC_SETUP_DETAIL"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"

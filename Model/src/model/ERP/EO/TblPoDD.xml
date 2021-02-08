@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="TBL_PO_D_D"
   AliasName="TblPoDD"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="model.ERP.EO.TblPoDDImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Id"
     ColumnName="ID"
@@ -57,7 +62,7 @@
     Name="CreatedBy"
     ColumnName="CREATED_BY"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_PO_D_D"/>
   <Attribute
@@ -71,7 +76,7 @@
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_PO_D_D"/>
   <AccessorAttribute

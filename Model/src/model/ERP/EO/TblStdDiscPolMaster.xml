@@ -55,19 +55,18 @@
     Name="GroupCompanyId"
     ColumnName="GROUP_COMPANY_ID"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_STD_DISC_POL_MASTER"/>
   <Attribute
     Name="CompanySbuId"
     ColumnName="COMPANY_SBU_ID"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_STD_DISC_POL_MASTER">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TblStdDiscPolMasterRow"/>
   </Attribute>
   <Attribute
