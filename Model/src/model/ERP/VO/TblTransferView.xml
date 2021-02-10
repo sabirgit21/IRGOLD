@@ -24,14 +24,13 @@
        TblTransfer.UPDATED_DATE, 
        TblTransfer.UPDATED_BY"
   FromList="TBL_TRANSFER TblTransfer"
-  Where="TblTransfer.COMPANY_SBU_ID= nvl(:getcompid,TblTransfer.fr_COMPANY_SBU_ID)">
+  Where="TblTransfer.FR_COMPANY_SBU_ID= nvl(:getcompid,TblTransfer.FR_COMPANY_SBU_ID)">
   <Variable
     Name="getcompid"
     Kind="where"
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="untrusted"
       CodeSourceName="TblTransferView"/>
   </Variable>
   <ViewAccessor

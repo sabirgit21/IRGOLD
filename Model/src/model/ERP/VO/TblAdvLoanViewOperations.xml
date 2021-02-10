@@ -5,12 +5,4 @@
     Name="TblAdvLoanView"
     Type="Static"
     URI="model/ERP/VO/TblAdvLoanView.bcs"/>
-  <ExpressionCodeSource
-    Name="TblAdvLoanView"
-    Type="Static"
-    URI="model/ERP/VO/TblAdvLoanView.bcs"/>
-  <ExpressionCodeSource
-    Name="TblAdvLoanViewRow"
-    Type="Static"
-    URI="model/ERP/VO/TblAdvLoanViewRow.bcs"/>
 </OperationDefinitions>

@@ -82,7 +82,7 @@
     TableName="TBL_TRANSFER">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="untrusted"
+      trustMode="trusted"
       CodeSourceName="TblTransferRow"/>
   </Attribute>
   <Attribute

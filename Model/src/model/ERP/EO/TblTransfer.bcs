@@ -4,3 +4,10 @@ package model.ERP.EO
 
 import oracle.jbo.script.annotation.TransientValueExpression;
 
+
+@TransientValueExpression(attributeName="FrCompanySbuId")
+def FrCompanySbuId_ExpressionScript_Expression()
+{
+adf.context.current.sessionScope.get('sessSBUID')
+}
+

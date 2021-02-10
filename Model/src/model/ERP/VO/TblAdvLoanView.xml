@@ -32,6 +32,7 @@
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
+      trustMode="trusted"
       CodeSourceName="TblAdvLoanView"/>
   </Variable>
   <ViewAccessor

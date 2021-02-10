@@ -82,7 +82,7 @@
     TableName="TBL_EMP">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="untrusted"
+      trustMode="trusted"
       CodeSourceName="TblEmpRow"/>
   </Attribute>
   <Attribute
