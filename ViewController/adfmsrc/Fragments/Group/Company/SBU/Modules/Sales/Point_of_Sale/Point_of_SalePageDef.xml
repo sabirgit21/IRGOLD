@@ -6,10 +6,12 @@
     <variableIterator id="variables"/>
     <iterator Binds="USERS_CRUD_OPERATIONS1" RangeSize="25" DataControl="AppModuleDataControl"
               id="USERS_CRUD_OPERATIONS1Iterator"/>
-    <iterator Binds="TblPosMView1" RangeSize="25" DataControl="AppModuleDataControl1" id="TblPosMView1Iterator"/>
-    <iterator Binds="TblPosDView2" RangeSize="25" DataControl="AppModuleDataControl1" id="TblPosDView2Iterator"/>
+    <iterator Binds="TblPosMView1" RangeSize="8" DataControl="AppModuleDataControl1" id="TblPosMView1Iterator"/>
+    <iterator Binds="TblPosDView2" RangeSize="8" DataControl="AppModuleDataControl1" id="TblPosDView2Iterator"/>
     <searchRegion Binds="TblPosDView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPosDView2Query"/>
+    <searchRegion Binds="TblPosMView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblPosMView1Query"/>
   </executables>
   <bindings>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl1"/>
@@ -104,6 +106,9 @@
     <action IterBinding="TblPosMView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="TblPosMView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="TblPosMView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="TblPosMView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TblPosMView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblPosMView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <tree IterBinding="TblPosDView2Iterator" id="TblPosDView2">
       <nodeDefinition DefName="model.ERP.VO.TblPosDView" Name="TblPosDView20">
         <AttrNames>
@@ -117,11 +122,32 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="TblPosMView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action IterBinding="TblPosMView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
-    <action IterBinding="TblPosMView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action IterBinding="TblPosDView2Iterator" id="CreateInsert1" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="TblPosDView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
     <action IterBinding="TblPosDView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="TblPosMView1Iterator" id="TblPosMView1">
+      <nodeDefinition DefName="model.ERP.VO.TblPosMView" Name="TblPosMView10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Vno"/>
+          <Item Value="Vtp"/>
+          <Item Value="Dated"/>
+          <Item Value="CompanySbuId"/>
+          <Item Value="MemberId"/>
+          <Item Value="ModeOfPayment"/>
+          <Item Value="CardType"/>
+          <Item Value="ChqNumber"/>
+          <Item Value="ChqDate"/>
+          <Item Value="GrossAmnt"/>
+          <Item Value="DiscPerc"/>
+          <Item Value="DiscAmount"/>
+          <Item Value="NetAmt"/>
+          <Item Value="Vat"/>
+          <Item Value="FinalAmount"/>
+          <Item Value="RecvdAmount"/>
+          <Item Value="BlncAmount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

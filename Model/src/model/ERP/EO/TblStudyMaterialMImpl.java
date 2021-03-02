@@ -64,6 +64,8 @@ public class TblStudyMaterialMImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int ID = AttributesEnum.Id.index();
     public static final int ACADYEARID = AttributesEnum.AcadYearId.index();
     public static final int GRADEID = AttributesEnum.GradeId.index();
@@ -89,6 +91,14 @@ public class TblStudyMaterialMImpl extends EntityImpl {
      */
     public TblStudyMaterialMImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("model.ERP.EO.TblStudyMaterialM");
+    }
+
 
     /**
      * Gets the attribute value for Id, using the alias name Id.
@@ -270,15 +280,15 @@ public class TblStudyMaterialMImpl extends EntityImpl {
      * Gets the attribute value for GroupCompanyId, using the alias name GroupCompanyId.
      * @return the value of GroupCompanyId
      */
-    public BigDecimal getGroupCompanyId() {
-        return (BigDecimal) getAttributeInternal(GROUPCOMPANYID);
+    public Number getGroupCompanyId() {
+        return (Number) getAttributeInternal(GROUPCOMPANYID);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for GroupCompanyId.
      * @param value value to set the GroupCompanyId
      */
-    public void setGroupCompanyId(BigDecimal value) {
+    public void setGroupCompanyId(Number value) {
         setAttributeInternal(GROUPCOMPANYID, value);
     }
 
@@ -334,15 +344,15 @@ public class TblStudyMaterialMImpl extends EntityImpl {
      * Gets the attribute value for CompanySbuId, using the alias name CompanySbuId.
      * @return the value of CompanySbuId
      */
-    public BigDecimal getCompanySbuId() {
-        return (BigDecimal) getAttributeInternal(COMPANYSBUID);
+    public Number getCompanySbuId() {
+        return (Number) getAttributeInternal(COMPANYSBUID);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for CompanySbuId.
      * @param value value to set the CompanySbuId
      */
-    public void setCompanySbuId(BigDecimal value) {
+    public void setCompanySbuId(Number value) {
         setAttributeInternal(COMPANYSBUID, value);
     }
 
@@ -360,6 +370,7 @@ public class TblStudyMaterialMImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(TBLSTUDYMATERIALD);
     }
 
+
     /**
      * @param id key constituent
 
@@ -367,13 +378,6 @@ public class TblStudyMaterialMImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal id) {
         return new Key(new Object[] { id });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("model.ERP.EO.TblStudyMaterialM");
     }
 
     /**
@@ -389,19 +393,31 @@ public class TblStudyMaterialMImpl extends EntityImpl {
      * @param e the transaction event
      */
     protected void doDML(int operation, TransactionEvent e) {
-        Number loginId = null;
-                        try {
-                            loginId = new Number((String) ADFContext.getCurrent().getSessionScope().get("sessUMID"));
-                        } catch(Exception ex) {
-                            ex.printStackTrace();
-                        }
-                        
-                        if (operation == DML_INSERT) {
-                            setCreatedBy(loginId);
-                            setUpdatedBy(loginId);
-                            } else if(operation == DML_UPDATE) {
-                            setUpdatedBy(loginId);
-                        }
+        Number userId = null;
+                Number cmpnyId = null;
+                Number sbuId = null;
+                 try {
+                     userId = new Number((String) ADFContext.getCurrent().getSessionScope().get("sessUMID"));
+                     cmpnyId = new Number((String) ADFContext.getCurrent().getSessionScope().get("sessCmpnyID"));
+                     sbuId = new Number((String) ADFContext.getCurrent().getSessionScope().get("sessSBUID"));
+                 } catch(Exception ex) {
+                     ex.printStackTrace();
+                 }
+                 
+                 if (operation == DML_INSERT) {
+
+                     setGroupCompanyId(cmpnyId);
+                     setCompanySbuId(sbuId);
+
+                     setCreatedBy(userId);
+                     setUpdatedBy(userId);
+                     } else if(operation == DML_UPDATE) {
+                     
+                     setGroupCompanyId(cmpnyId);
+                     setCompanySbuId(sbuId);
+                     
+                     setUpdatedBy(userId);
+                 }
         super.doDML(operation, e);
     }
 }

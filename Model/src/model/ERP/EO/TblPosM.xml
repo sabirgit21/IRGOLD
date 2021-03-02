@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="TBL_POS_M"
   AliasName="TblPosM"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="model.ERP.EO.TblPosMImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Id"
     ColumnName="ID"
@@ -158,9 +163,13 @@
     Name="CompanySbuId"
     ColumnName="COMPANY_SBU_ID"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TBL_POS_M"/>
+    TableName="TBL_POS_M">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="TblPosMRow"/>
+  </Attribute>
   <Attribute
     Name="CreatedDate"
     ColumnName="CREATED_DATE"
@@ -172,7 +181,7 @@
     Name="CreatedBy"
     ColumnName="CREATED_BY"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_POS_M"/>
   <Attribute
@@ -186,7 +195,7 @@
     Name="UpdatedBy"
     ColumnName="UPDATED_BY"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TBL_POS_M"/>
   <AccessorAttribute

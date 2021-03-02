@@ -25,7 +25,7 @@
        TblStudyWeekPlanMaster.SECTIONS_ID, 
        TblStudyWeekPlanMaster.COMPANY_SBU_ID"
   FromList="TBL_STUDY_WEEK_PLAN_MASTER TblStudyWeekPlanMaster"
-  Where="TblStudyWeekPlanMaster.STAFF_ID = nvl(:getSessStaffID,TblStudyWeekPlanMaster.STAFF_ID) 
+  Where="TblStudyWeekPlanMaster.STAFF_ID = nvl(:getSessStaffID,TblStudyWeekPlanMaster.STAFF_ID) AND 
 TblStudyWeekPlanMaster.COMPANY_SBU_ID= nvl(:getcompid,TblStudyWeekPlanMaster.COMPANY_SBU_ID)">
   <Variable
     Name="getSessStaffID"
@@ -41,7 +41,6 @@ TblStudyWeekPlanMaster.COMPANY_SBU_ID= nvl(:getcompid,TblStudyWeekPlanMaster.COM
     Type="java.math.BigDecimal">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="TblStudyWeekPlanMasterView"/>
   </Variable>
   <ViewAccessor
