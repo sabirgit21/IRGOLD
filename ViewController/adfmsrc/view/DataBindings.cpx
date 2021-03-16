@@ -583,6 +583,8 @@
           usageId="view_Assets_Waranty_Claim_TaskFlow_Assets_Waranty_Claim_TaskFlow_ExecuteWithParamsPageDef"/>
     <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Depriciation_TaskFlow.xml#Assets_Depriciation_TaskFlow@ExecuteWithParams"
           usageId="view_Assets_Depriciation_TaskFlow_Assets_Depriciation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Fixed_Assets/Fixed_Assets_Setup/Chart_of_Account.jsff"
+          usageId="view_Chart_of_AccountPageDef1"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_GroupPageDef" path="Main_Pages.Group.GroupPageDef"/>
@@ -1129,6 +1131,8 @@
           path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Waranty_Claim_TaskFlow_Assets_Waranty_Claim_TaskFlow_ExecuteWithParamsPageDef"/>
     <page id="view_Assets_Depriciation_TaskFlow_Assets_Depriciation_TaskFlow_ExecuteWithParamsPageDef"
           path="TaskFlows.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Depriciation_TaskFlow_Assets_Depriciation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Chart_of_AccountPageDef1"
+          path="Fragments.Group.Company.SBU.Modules.Fixed_Assets.Fixed_Assets_Setup.Chart_of_AccountPageDef"/>
   </pageDefinitionUsages>
   
   <!--<pageDefinitionUsages>
