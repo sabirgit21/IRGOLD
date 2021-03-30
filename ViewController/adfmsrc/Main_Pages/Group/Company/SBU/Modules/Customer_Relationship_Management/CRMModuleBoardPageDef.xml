@@ -9,6 +9,8 @@
               id="CRM_Transaction_Pages1Iterator"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.CRMModuleBoard_SidebarBean.dynamicTaskFlowId}"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="CRM_Reports_Pages1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CRM_Reports_Pages1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="CRM_Setup_Pages1Iterator" id="CRM_Setup_Pages1">
@@ -48,6 +50,22 @@
           <Item Value="REdit"/>
           <Item Value="RDelete"/>
           <Item Value="RPrint"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CRM_Reports_Pages1Iterator" id="CRM_Reports_Pages1">
+      <nodeDefinition DefName="model.UserRoles.VO.CRM_Reports_Pages" Name="CRM_Reports_Pages10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+          <Item Value="ReportIcon"/>
+          <Item Value="ReportLink"/>
+          <Item Value="SrNo"/>
+          <Item Value="RoleId"/>
+          <Item Value="CompanyReportId"/>
+          <Item Value="RoleId1"/>
+          <Item Value="RView"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
