@@ -317,11 +317,17 @@
     Name="Bank_Cash_Pages1"
     ViewObjectName="model.UserRoles.VO.Bank_Cash_Pages"/>
   <ViewUsage
+    Name="Fixed_Assets_Setup_Pages1"
+    ViewObjectName="model.UserRoles.VO.Fixed_Assets_Setup_Pages"/>
+  <ViewUsage
     Name="Fixed_Assets_Transaction_Pages1"
     ViewObjectName="model.UserRoles.VO.Fixed_Assets_Transaction_Pages"/>
   <ViewUsage
-    Name="Fixed_Assets_Setup_Pages1"
-    ViewObjectName="model.UserRoles.VO.Fixed_Assets_Setup_Pages"/>
+    Name="CRM_Transaction_Pages1"
+    ViewObjectName="model.UserRoles.VO.CRM_Transaction_Pages"/>
+  <ViewUsage
+    Name="CRM_Setup_Pages1"
+    ViewObjectName="model.UserRoles.VO.CRM_Setup_Pages"/>
   <ViewLinkUsage
     Name="FkCompanySbuCoCompanyLink1"
     ViewLinkObjectName="model.UserRoles.VO.FkCompanySbuCoCompanyLink"

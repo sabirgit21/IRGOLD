@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="CRMModuleBoardPageDef"
+                Package="Main_Pages.Group.Company.SBU.Modules.Customer_Relationship_Management">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CRM_Setup_Pages1" RangeSize="25" DataControl="AppModuleDataControl" id="CRM_Setup_Pages1Iterator"/>
+    <iterator Binds="CRM_Transaction_Pages1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CRM_Transaction_Pages1Iterator"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.CRMModuleBoard_SidebarBean.dynamicTaskFlowId}"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CRM_Setup_Pages1Iterator" id="CRM_Setup_Pages1">
+      <nodeDefinition DefName="model.UserRoles.VO.CRM_Setup_Pages" Name="CRM_Setup_Pages10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+          <Item Value="PageIcon"/>
+          <Item Value="PageLink"/>
+          <Item Value="SrNo"/>
+          <Item Value="RoleId"/>
+          <Item Value="CompanyPagesId"/>
+          <Item Value="RoleId1"/>
+          <Item Value="RView"/>
+          <Item Value="RAdd"/>
+          <Item Value="REdit"/>
+          <Item Value="RDelete"/>
+          <Item Value="RPrint"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CRM_Transaction_Pages1Iterator" id="CRM_Transaction_Pages1">
+      <nodeDefinition DefName="model.UserRoles.VO.CRM_Transaction_Pages" Name="CRM_Transaction_Pages10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+          <Item Value="PageIcon"/>
+          <Item Value="PageLink"/>
+          <Item Value="SrNo"/>
+          <Item Value="RoleId"/>
+          <Item Value="CompanyPagesId"/>
+          <Item Value="RoleId1"/>
+          <Item Value="RView"/>
+          <Item Value="RAdd"/>
+          <Item Value="REdit"/>
+          <Item Value="RDelete"/>
+          <Item Value="RPrint"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

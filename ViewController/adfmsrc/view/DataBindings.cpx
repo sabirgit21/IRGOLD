@@ -595,6 +595,24 @@
           usageId="view_Assets_ReturnPageDef"/>
     <page path="/WEB-INF/Fragments/Group/Company/SBU/Modules/Fixed_Assets/Transaction/Assets_Waranty_Claim.jsff"
           usageId="view_Assets_Waranty_ClaimPageDef"/>
+    <page path="/Main_Pages/Group/Company/SBU/Modules/Customer_Relationship_Management/CRMModuleBoard.jsf"
+          usageId="view_CRMModuleBoardPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Setup/Query_Ticket_TaskFlow.xml#Query_Ticket_TaskFlow@ExecuteWithParams"
+          usageId="view_Query_Ticket_TaskFlow_Query_Ticket_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Setup/Product_Services_Setup_TaskFlow.xml#Product_Services_Setup_TaskFlow@ExecuteWithParams"
+          usageId="view_Product_Services_Setup_TaskFlow_Product_Services_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Setup/Customer_Ticket_TaskFlow.xml#Customer_Ticket_TaskFlow@ExecuteWithParams"
+          usageId="view_Customer_Ticket_TaskFlow_Customer_Ticket_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Setup/Customer_Qoutation_TaskFlow.xml#Customer_Qoutation_TaskFlow@ExecuteWithParams"
+          usageId="view_Customer_Qoutation_TaskFlow_Customer_Qoutation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Transaction/Job_Allocation_TaskFlow.xml#Job_Allocation_TaskFlow@ExecuteWithParams"
+          usageId="view_Job_Allocation_TaskFlow_Job_Allocation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Transaction/Job_Followup_Status_TaskFlow.xml#Job_Followup_Status_TaskFlow@ExecuteWithParams"
+          usageId="view_Job_Followup_Status_TaskFlow_Job_Followup_Status_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Transaction/Job_Completion_TaskFlow.xml#Job_Completion_TaskFlow@ExecuteWithParams"
+          usageId="view_Job_Completion_TaskFlow_Job_Completion_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page path="/WEB-INF/TaskFlows/Group/Company/SBU/Modules/Customer_Relationship_Management/CRM_Transaction/Job_Receipts_TaskFlow.xml#Job_Receipts_TaskFlow@ExecuteWithParams"
+          usageId="view_Job_Receipts_TaskFlow_Job_Receipts_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_GroupPageDef" path="Main_Pages.Group.GroupPageDef"/>
@@ -1153,6 +1171,24 @@
           path="Fragments.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_ReturnPageDef"/>
     <page id="view_Assets_Waranty_ClaimPageDef"
           path="Fragments.Group.Company.SBU.Modules.Fixed_Assets.Transaction.Assets_Waranty_ClaimPageDef"/>
+    <page id="view_CRMModuleBoardPageDef"
+          path="Main_Pages.Group.Company.SBU.Modules.Customer_Relationship_Management.CRMModuleBoardPageDef"/>
+    <page id="view_Query_Ticket_TaskFlow_Query_Ticket_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Setup.Query_Ticket_TaskFlow_Query_Ticket_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Product_Services_Setup_TaskFlow_Product_Services_Setup_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Setup.Product_Services_Setup_TaskFlow_Product_Services_Setup_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Customer_Ticket_TaskFlow_Customer_Ticket_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Setup.Customer_Ticket_TaskFlow_Customer_Ticket_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Customer_Qoutation_TaskFlow_Customer_Qoutation_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Setup.Customer_Qoutation_TaskFlow_Customer_Qoutation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Job_Allocation_TaskFlow_Job_Allocation_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Transaction.Job_Allocation_TaskFlow_Job_Allocation_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Job_Followup_Status_TaskFlow_Job_Followup_Status_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Transaction.Job_Followup_Status_TaskFlow_Job_Followup_Status_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Job_Completion_TaskFlow_Job_Completion_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Transaction.Job_Completion_TaskFlow_Job_Completion_TaskFlow_ExecuteWithParamsPageDef"/>
+    <page id="view_Job_Receipts_TaskFlow_Job_Receipts_TaskFlow_ExecuteWithParamsPageDef"
+          path="TaskFlows.Group.Company.SBU.Modules.Customer_Relationship_Management.CRM_Transaction.Job_Receipts_TaskFlow_Job_Receipts_TaskFlow_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   
   <!--<pageDefinitionUsages>

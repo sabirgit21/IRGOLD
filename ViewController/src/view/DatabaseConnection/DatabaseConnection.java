@@ -24,7 +24,7 @@ public class DatabaseConnection {
         setUNamee("irgc");
         setUpasss("irgc");
 //        setUipp("207.180.246.67");
-        setUipp("192.168.2.2");
+        setUipp("192.168.1.4");
 //        setUipp("192.168.2.3");
         setUportADF("1521");
         setUSID("orcl");

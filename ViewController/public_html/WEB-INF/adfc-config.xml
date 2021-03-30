@@ -120,4 +120,9 @@
     <managed-bean-class>view.SideBar.FixedAssetsModuleBoard_Sidebar</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__25">
+    <managed-bean-name>CRMModuleBoard_SidebarBean</managed-bean-name>
+    <managed-bean-class>view.SideBar.CRMModuleBoard_Sidebar</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
