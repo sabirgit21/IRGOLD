@@ -38,15 +38,15 @@ public class StudentDetail {
             switch (selectedReportType) {
             case "StudentBIOData":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Students_biodata&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Students_biodata&");
                 break;
             case "StudentDetail":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Student_Registration_Detail_Report&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Student_Registration_Detail_Report&");
                 break;
             case "StudentGradeWise":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Students_Biodata_GradeWise&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Students_Biodata_GradeWise&");
                 break;
 
             

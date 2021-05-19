@@ -22,7 +22,7 @@ public class DatabaseConnection {
         
         /* Database credentials >> username , password , hostname , port , SID  */
         setUNamee("irgc");
-        setUpasss("irgc");
+        setUpasss("irgcir");
 //        setUipp("207.180.246.67");
         setUipp("192.168.1.4");
 //        setUipp("192.168.2.3");

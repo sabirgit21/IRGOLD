@@ -41,22 +41,22 @@ public class StaffDetail {
             switch (selectedReportType) {
             case "MiscellaneousDocumentsDetailReport":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Miscellaneous_Documents_Detail_Report&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Miscellaneous_Documents_Detail_Report&");
                 break;
             
             case "PassportExpiryDetailReport":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Passport_Expiry_Detail_Report&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Passport_Expiry_Detail_Report&");
                 break;
 
             case "VisaExpiryDetailReport":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Visa_Expiry_Detail_Report&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Visa_Expiry_Detail_Report&");
                 break;
 
             case "StaffDetailReport":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Staff_Detail_Report&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Staff_Detail_Report&");
                 break;
 
             default:

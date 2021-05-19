@@ -52,7 +52,7 @@ public class DiscountPolicy {
                 reportBean.setReportParameter("P_Grade_id", gotGrade.toString());
             }
             
-         reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/Discount_Policy_Report&");
+         reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/Discount_Policy_Report&");
         } 
         reportBean.setReportServerParam(OracleReportBean.RS_PARAM_DESTYPE,
                                         "CACHE"); // which will be one of the [cashe - file - mail - printer]

@@ -93,7 +93,7 @@ public class StudentLedger {
             switch (selectedReportType) {
             case "StdLedger":
 
-                reportBean.setReportURLName("userid=irgc/irgc@orcl&domain=classicdomain&report=C:/IRGC_Reports/STD_Ledger&");
+                reportBean.setReportURLName("userid=irgc/irgcir@orcl&domain=classicdomain&report=C:/IRGC_Reports/STD_Ledger&");
                 break;
 
             
